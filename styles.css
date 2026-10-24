@@ -22,3 +22,18 @@
 @media(max-width:1100px){.header .brand{min-width:245px}.header .brand img{width:245px;height:84px}.header .nav{min-height:90px;gap:12px}.nav nav{gap:12px}}
 @media(max-width:760px){.header .brand{min-width:0}.header .brand img{width:190px;height:70px}.header .nav{min-height:78px}.partner-inner{flex-wrap:wrap;gap:17px}.partner-logo{width:210px}.partner-copy{min-width:200px}.partner-link{width:100%;text-align:center}.nav nav{top:78px}}
 @media(max-width:420px){.header .brand img{width:155px;height:62px}.header .nav{min-height:70px}.nav nav{top:70px}.partner-logo{width:190px}.partner-copy h2{font-size:19px}}
+
+
+/* Version 4 — logo officiel lisible et carrousel de 3 machines */
+.header .nav .brand{width:260px;min-width:260px;flex:0 0 260px;display:flex;align-items:center}
+.header .nav .brand img{display:block!important;width:260px!important;max-width:none!important;height:auto!important;max-height:95px!important;object-fit:contain!important;mix-blend-mode:normal}
+.header .nav{min-height:106px}
+.catalog-carousel{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;align-items:center;gap:12px}
+.catalog-carousel .catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr));min-width:0}
+.catalog-arrow{border:1px solid var(--line);border-radius:50%;width:42px;height:42px;background:white;color:var(--blue);font-size:34px;line-height:1;display:grid;place-items:center;box-shadow:0 3px 14px #20205013}
+.catalog-arrow:hover:not(:disabled){background:var(--blue);color:white}
+.catalog-arrow:disabled{opacity:.25;cursor:not-allowed}
+.catalog-pagination{text-align:center;font-size:13px;color:var(--muted);padding:18px 0 0}
+@media(max-width:1100px){.header .nav .brand{width:215px;min-width:215px;flex-basis:215px}.header .nav .brand img{width:215px!important}}
+@media(max-width:760px){.header .nav .brand{width:175px;min-width:175px;flex-basis:175px}.header .nav .brand img{width:175px!important}.catalog-carousel{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.catalog-arrow{width:34px;height:34px;font-size:28px}.catalog-carousel .catalog-grid{grid-template-columns:1fr}}
+@media(max-width:420px){.header .nav .brand{width:145px;min-width:145px;flex-basis:145px}.header .nav .brand img{width:145px!important}}

@@ -1,5 +1,15 @@
 [
   {
+    "id": "aerogommeuse",
+    "name": "Aérogommeuse",
+    "category": "Décapage",
+    "description": "Décapage doux de bois, pierre et métal par projection d’abrasif. Modèle et accessoires à confirmer.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
     "id": "mini-pelle",
     "name": "Mini-pelle 1,8 t",
     "category": "Terrassement",

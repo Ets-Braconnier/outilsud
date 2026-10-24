@@ -28,3 +28,11 @@ MISE À JOUR : identité Outilsud
 
 VERSION 3 : logo Outilsud agrandi, nouveau titre d'accueil, logo officiel Braconnier sous la vidéo et dans le pied de page, liens vers https://braconnier.be/fr/index.html.
 La vidéo YouTube dépend des autorisations d'intégration et de lecture automatique du navigateur.
+
+VERSION 4 : Logo Outilsud recadré et agrandi, CSS prioritaire, catalogue affichant
+3 machines par page sur ordinateur (1 sur mobile), navigation avec flèches.
+La recherche et les catégories filtrent toujours l'ensemble des machines.
+Pour GitHub : remplacer TOUS les fichiers (index.html, styles.css, app.js,
+images-site/) puis vérifier le déploiement Pages et actualiser Ctrl+F5.
+
+VERSION 5 : aérogommeuse ajoutée au catalogue (machine illustrative, stock à confirmer). Boutons « Demander un devis de location » et « Ajoutée au devis ». Mise à jour du texte des demandes.\n
