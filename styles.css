@@ -37,3 +37,22 @@
 @media(max-width:1100px){.header .nav .brand{width:215px;min-width:215px;flex-basis:215px}.header .nav .brand img{width:215px!important}}
 @media(max-width:760px){.header .nav .brand{width:175px;min-width:175px;flex-basis:175px}.header .nav .brand img{width:175px!important}.catalog-carousel{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.catalog-arrow{width:34px;height:34px;font-size:28px}.catalog-carousel .catalog-grid{grid-template-columns:1fr}}
 @media(max-width:420px){.header .nav .brand{width:145px;min-width:145px;flex-basis:145px}.header .nav .brand img{width:145px!important}}
+
+/* v6 : cartes strictement alignées, quel que soit le texte */
+.catalog-carousel .catalog-grid{align-items:stretch}
+.catalog-carousel .machine-card{display:flex;flex-direction:column;height:100%;min-width:0}
+.catalog-carousel .machine-content{display:flex;flex:1;flex-direction:column}
+.catalog-carousel .machine-content p{min-height:0;flex:1}
+.catalog-carousel .machine-meta{margin-top:auto}
+.catalog-carousel .machine-button{margin-top:auto;min-height:58px}
+/* Histoire d'Outilsud */
+.history-intro{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin:18px 0 30px}
+.history-intro p{margin:0;font-size:16px}
+.history-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.history-grid article{background:#f5f6fc;border:1px solid #e0e1ef;border-radius:13px;padding:25px}
+.history-grid h3{margin:10px 0;font-size:19px}
+.history-grid p{font-size:14px;margin:0}
+.history-date{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.history-link{margin-top:25px;border-left:4px solid var(--blue);padding:15px 23px;background:#f7f7fc}
+.history-link p{margin:0 0 8px}.history-link a{color:var(--blue);font-weight:800}
+@media(max-width:760px){.history-intro,.history-grid{grid-template-columns:1fr}.history-intro{gap:15px}}
