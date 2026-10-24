@@ -29,3 +29,16 @@ function mail(subject,body){const configuredEmail='';if(!configuredEmail){toast(
 $('requestForm').addEventListener('submit',e=>{e.preventDefault();if(!selected.size){toast('Sélectionnez au moins une machine.');return}let d=Object.fromEntries(new FormData(e.currentTarget));if(d.end<d.start){toast('La date de fin doit être après la date de début.');return}let list=[...selected].map(id=>machines.find(m=>m.id===id)?.name).filter(Boolean).join(', ');mail('Demande de location Outilsud','Bonjour,\n\nJe souhaite obtenir une offre de location.\n\nMachines : '+list+'\nDébut : '+d.start+'\nFin : '+d.end+'\nNom : '+d.name+'\nSociété : '+(d.company||'-')+'\nE-mail : '+d.email+'\nTéléphone : '+d.phone+'\nPrécisions : '+(d.message||'-')+'\n\nCordialement')});
 $('contactForm').addEventListener('submit',e=>{e.preventDefault();let d=Object.fromEntries(new FormData(e.currentTarget));mail('Contact via le site Outilsud','Nom : '+d.name+'\nE-mail : '+d.email+'\n\n'+d.message)});
 $('year').textContent=new Date().getFullYear();const today=new Date().toLocaleDateString('en-CA');document.querySelector('[name=start]').min=today;document.querySelector('[name=end]').min=today;init();
+
+// Galerie du magasin : fichiers présents dans images-site/magasin/ sur GitHub.
+(()=>{
+ const filenames=['1.png','2.png','3.png','4.png','5.png','6.png','7.png','8.png','9.1.png','9.2.png','9.3.png','9.4.png','9.5.png','9.6.png','9.7.png','9.8.png','9.9.1.png','9.9.2.png','9.9.3.png','9.9.4.png','9.9.5.png','9.9.9.png','9.png'];
+ const img=document.getElementById('shopSlide'),counter=document.getElementById('shopCounter'),prev=document.getElementById('shopPrev'),next=document.getElementById('shopNext');
+ if(!img||!counter||!prev||!next)return;
+ let index=0, timer;
+ function show(n){index=(n+filenames.length)%filenames.length;img.src='images-site/magasin/'+filenames[index];img.alt='Photo du magasin Outilsud '+(index+1);counter.textContent=(index+1)+' / '+filenames.length;}
+ function start(){clearInterval(timer);timer=setInterval(()=>show(index+1),4000)}
+ prev.addEventListener('click',()=>{show(index-1);start()});next.addEventListener('click',()=>{show(index+1);start()});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(timer);else start()});
+ show(0);start();
+})();

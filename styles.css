@@ -77,3 +77,11 @@ html{scroll-padding-top:92px}
 #location .catalog-pagination{padding-top:9px}
 @media(max-width:760px){html{scroll-padding-top:78px}#location{scroll-margin-top:78px;padding-top:20px}#location .section-heading{align-items:start}#location .machine-art{height:155px}}
 @media(max-height:780px) and (min-width:761px){#location .machine-art{height:112px}#location .machine-art svg{height:85px}#location .machine-content{padding:11px 14px}#location .section-heading h2{font-size:30px}#location .catalog-pagination{padding-top:5px}}
+
+/* v8 — galerie automatique des photos du magasin */
+.shop-slideshow{position:relative;overflow:hidden;border-radius:20px;background:#f3f3fa;aspect-ratio:1.76;align-self:center;min-width:0;box-shadow:0 8px 25px #2323510e}
+.shop-slideshow>img{width:100%;height:100%;display:block;object-fit:contain;object-position:center;background:#f6f6fa;transition:opacity .3s ease}
+.shop-slide-controls{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:14px;align-items:center;background:#ffffffed;border-radius:30px;padding:5px 9px;box-shadow:0 3px 12px #0002;color:#32317f;font-weight:700;font-size:12px}
+.shop-slide-controls button{width:30px;height:30px;border:0;border-radius:50%;background:#32317f;color:white;font-size:22px;line-height:1;cursor:pointer}
+.shop-slide-controls button:hover{background:#5150a0}
+@media(max-width:760px){.shop-slideshow{aspect-ratio:1.5}}

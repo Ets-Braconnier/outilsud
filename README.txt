@@ -37,3 +37,11 @@ images-site/) puis vérifier le déploiement Pages et actualiser Ctrl+F5.
 
 VERSION 5 : aérogommeuse ajoutée au catalogue (machine illustrative, stock à confirmer). Boutons « Demander un devis de location » et « Ajoutée au devis ». Mise à jour du texte des demandes.\n
 VERSION 6 : page À propos réécrite à partir de l’histoire publiée sur le site Outilsud ; alignement des cartes ; suppression de la note de démonstration du catalogue. Vérifier les descriptions et disponibilités avant mise en ligne.
+
+VERSION 8 — DIAPORAMA VENTE
+La zone violette Vente & Conseil est remplacée par un diaporama de photos.
+IMPORTANT : Les 23 images ne sont PAS incluses dans cette archive.
+Elles doivent rester sur GitHub au chemin images-site/magasin/
+N'effacez PAS ce dossier en mettant à jour les autres fichiers.
+Les noms des images sont définis dans app.js. Rotation automatique toutes les 4 s.
+Toutes les images sont contenues dans un cadre fixe sans déformation (object-fit:contain).
