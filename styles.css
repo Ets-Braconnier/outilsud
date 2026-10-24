@@ -56,3 +56,24 @@
 .history-link{margin-top:25px;border-left:4px solid var(--blue);padding:15px 23px;background:#f7f7fc}
 .history-link p{margin:0 0 8px}.history-link a{color:var(--blue);font-weight:800}
 @media(max-width:760px){.history-intro,.history-grid{grid-template-columns:1fr}.history-intro{gap:15px}}
+
+/* v7 — section Location visible plus complètement lors de l'accès par le menu */
+html{scroll-padding-top:92px}
+#location{scroll-margin-top:92px;padding-top:20px;padding-bottom:36px}
+#location .section-heading{margin-bottom:15px;align-items:center}
+#location .section-heading .eyebrow{margin-bottom:7px}
+#location .section-heading h2{font-size:clamp(27px,2.6vw,37px);margin-bottom:8px}
+#location .section-heading p{margin:0;line-height:1.4;font-size:14px}
+#location .text-link{margin-bottom:0}
+#location .filters{margin-bottom:14px}
+#location .search-wrap input{padding-top:10px;padding-bottom:10px}
+#location .machine-art{height:130px}
+#location .machine-art svg{width:112px;height:95px}
+#location .machine-content{padding:14px 16px}
+#location .machine-content h3{font-size:18px;margin-bottom:5px}
+#location .machine-content p{margin-bottom:8px;line-height:1.35}
+#location .machine-meta{margin-bottom:10px}
+#location .machine-button{min-height:46px;padding:8px 6px;font-size:13px}
+#location .catalog-pagination{padding-top:9px}
+@media(max-width:760px){html{scroll-padding-top:78px}#location{scroll-margin-top:78px;padding-top:20px}#location .section-heading{align-items:start}#location .machine-art{height:155px}}
+@media(max-height:780px) and (min-width:761px){#location .machine-art{height:112px}#location .machine-art svg{height:85px}#location .machine-content{padding:11px 14px}#location .section-heading h2{font-size:30px}#location .catalog-pagination{padding-top:5px}}

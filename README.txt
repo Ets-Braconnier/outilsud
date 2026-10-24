@@ -36,3 +36,4 @@ Pour GitHub : remplacer TOUS les fichiers (index.html, styles.css, app.js,
 images-site/) puis vérifier le déploiement Pages et actualiser Ctrl+F5.
 
 VERSION 5 : aérogommeuse ajoutée au catalogue (machine illustrative, stock à confirmer). Boutons « Demander un devis de location » et « Ajoutée au devis ». Mise à jour du texte des demandes.\n
+VERSION 6 : page À propos réécrite à partir de l’histoire publiée sur le site Outilsud ; alignement des cartes ; suppression de la note de démonstration du catalogue. Vérifier les descriptions et disponibilités avant mise en ligne.
