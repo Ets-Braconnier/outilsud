@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mini-pelle",
+    "name": "Mini-pelle 1,8 t",
+    "category": "Terrassement",
+    "description": "Mini-pelle compacte pour tranchées, fondations et aménagements.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "plaque-vibrante",
+    "name": "Plaque vibrante",
+    "category": "Compactage",
+    "description": "Compactage d'empierrement, sable et pavés.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "betonniere",
+    "name": "Bétonnière électrique",
+    "category": "Béton",
+    "description": "Préparation de béton et de mortier sur chantier.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "marteau-piqueur",
+    "name": "Marteau-piqueur",
+    "category": "Démolition",
+    "description": "Démolition de dalles et maçonneries.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "carotteuse",
+    "name": "Carotteuse diamant",
+    "category": "Forage",
+    "description": "Percement précis de béton et maçonnerie.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "scie-sol",
+    "name": "Scie de sol",
+    "category": "Découpe",
+    "description": "Découpe de sols et surfaces minérales.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "nacelle",
+    "name": "Nacelle élévatrice",
+    "category": "Élévation",
+    "description": "Travaux en hauteur et interventions techniques.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "deshumidificateur",
+    "name": "Déshumidificateur",
+    "category": "Traitement de l'air",
+    "description": "Séchage de locaux après travaux.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "nettoyeur",
+    "name": "Nettoyeur haute pression",
+    "category": "Nettoyage",
+    "description": "Nettoyage intensif des surfaces extérieures.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "groupe-electrogene",
+    "name": "Groupe électrogène",
+    "category": "Énergie",
+    "description": "Alimentation électrique temporaire.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "tronconneuse",
+    "name": "Tronçonneuse thermique",
+    "category": "Espaces verts",
+    "description": "Travaux de coupe et d'entretien extérieur.",
+    "period": "Journée / semaine",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "broyeur",
+    "name": "Broyeur de branches",
+    "category": "Espaces verts",
+    "description": "Réduction des branches et déchets verts.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  }
+]
