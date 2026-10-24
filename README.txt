@@ -25,3 +25,6 @@ MISE À JOUR : identité Outilsud
 - Vidéo YouTube EHhL8LVfJyE intégrée en fond d'accueil, muette et en boucle.
 - La lecture dépend de YouTube, du réseau, des cookies et des restrictions d'intégration.
 - Pour une vidéo auto-hébergée, il faut obtenir le fichier et les droits de diffusion.
+
+VERSION 3 : logo Outilsud agrandi, nouveau titre d'accueil, logo officiel Braconnier sous la vidéo et dans le pied de page, liens vers https://braconnier.be/fr/index.html.
+La vidéo YouTube dépend des autorisations d'intégration et de lecture automatique du navigateur.

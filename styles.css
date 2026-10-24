@@ -3,3 +3,22 @@
 
 /* Identité visuelle officielle Outilsud */
 .brand{display:flex;align-items:center;min-width:205px}.brand img{display:block;width:210px;height:68px;object-fit:contain;object-position:center;mix-blend-mode:multiply}.hero-video{position:relative;min-height:570px;background:#25245f;color:white;display:flex;align-items:center;isolation:isolate;overflow:hidden}.video-backdrop{position:absolute;inset:0;overflow:hidden;z-index:-3;pointer-events:none}.video-backdrop iframe{position:absolute;top:50%;left:50%;width:max(100%,177.78vh);height:max(100%,56.25vw);transform:translate(-50%,-50%);border:0}.video-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,23,63,.92) 0%,rgba(35,34,89,.78) 42%,rgba(35,34,89,.27) 100%);z-index:-1}.hero-video-content{padding:110px 0 120px}.hero-video .eyebrow{color:#e1e1ff}.hero-video h1{font-size:clamp(42px,5.4vw,70px);line-height:1.07;letter-spacing:-2px;margin:0 0 24px;color:white}.hero-video h1 span{color:#dedcff}.hero-video p{max-width:570px;font-size:18px;color:#f2f2ff}.hero-video .primary{background:white;color:#32317f;border-color:white}.hero-video .outline{background:transparent;border-color:white;color:white}.video-credit{position:absolute;right:22px;bottom:20px;color:white;font-size:12px;text-decoration:underline;text-underline-offset:3px}.hero-video .hero-actions{margin-top:30px}.header{background:white}@media(max-width:690px){.brand{min-width:0}.brand img{width:140px;height:53px}.hero-video{min-height:500px}.hero-video-content{padding:90px 0}.hero-video h1{font-size:43px}.hero-video p{font-size:15px}.video-backdrop iframe{width:max(100%,177.78vh);height:max(100%,56.25vw)}}
+
+/* Version 3 — logo plus visible et partenariat Braconnier */
+:root{--blue:#32317f;--blue2:#4c4ba0;--navy:#25245f}
+.header .nav{min-height:112px;gap:18px}
+.header .brand{min-width:330px;flex-shrink:0}
+.header .brand img{width:330px;height:100px;object-fit:contain;object-position:left center}
+.partner-band{background:#fff;border-bottom:1px solid #e8e8f2;padding:32px 0}
+.partner-inner{display:flex;align-items:center;gap:34px}
+.partner-logo{display:flex;align-items:center;justify-content:center;width:255px;flex-shrink:0;padding:14px 16px;border:1px solid #e9e9f1;border-radius:12px;background:white}
+.partner-logo img{width:100%;height:auto;object-fit:contain}
+.partner-copy{flex:1}.partner-copy .eyebrow{font-size:10px;letter-spacing:1.4px;margin-bottom:4px}
+.partner-copy h2{font-size:22px;margin:0 0 4px;line-height:1.25;color:#29275f}
+.partner-copy p{font-size:13px;color:#627086;margin:0}
+.partner-link{font-size:13px;font-weight:800;color:#32317f;white-space:nowrap;border:1px solid #32317f;padding:12px 16px;border-radius:8px}
+.partner-link:hover{background:#32317f;color:white}
+.footer-partner img{display:block;width:190px;max-width:100%;height:auto;margin-bottom:18px}
+@media(max-width:1100px){.header .brand{min-width:245px}.header .brand img{width:245px;height:84px}.header .nav{min-height:90px;gap:12px}.nav nav{gap:12px}}
+@media(max-width:760px){.header .brand{min-width:0}.header .brand img{width:190px;height:70px}.header .nav{min-height:78px}.partner-inner{flex-wrap:wrap;gap:17px}.partner-logo{width:210px}.partner-copy{min-width:200px}.partner-link{width:100%;text-align:center}.nav nav{top:78px}}
+@media(max-width:420px){.header .brand img{width:155px;height:62px}.header .nav{min-height:70px}.nav nav{top:70px}.partner-logo{width:190px}.partner-copy h2{font-size:19px}}
