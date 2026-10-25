@@ -19,15 +19,34 @@ async function init() {
   await import('./contact.js');
   await import('./request.js');
 
+  // Calculer la hauteur réelle du menu évite de masquer le début des sections.
+  function scrollToSection(hash, behavior = 'smooth') {
+    const id = decodeURIComponent(hash.replace(/^#/, ''));
+    const target = document.getElementById(id);
+    if (!target) return;
+    const header = document.querySelector('.site-header');
+    const offset = header ? header.getBoundingClientRect().height : 0;
+    const top = window.scrollY + target.getBoundingClientRect().top - offset;
+    window.scrollTo({top: Math.max(0, top), behavior});
+  }
   document.addEventListener('click', event => {
-    if (!event.target.closest('a[href^="#"]')) return;
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const hash = link.getAttribute('href');
+    if (!hash || !document.getElementById(hash.slice(1))) return;
+    event.preventDefault();
     document.querySelector('.main-nav')?.classList.remove('open');
     document.querySelector('.menu-toggle')?.setAttribute('aria-expanded','false');
+    if (location.hash !== hash) history.pushState(null, '', hash);
+    scrollToSection(hash);
+  });
+  window.addEventListener('popstate', () => {
+    scrollToSection(location.hash || '#accueil', 'instant');
   });
   if (location.hash) {
-    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-    if (target) requestAnimationFrame(() => target.scrollIntoView());
+    requestAnimationFrame(() => scrollToSection(location.hash, 'instant'));
   }
+
 }
 init().catch(error => {
   console.error(error);

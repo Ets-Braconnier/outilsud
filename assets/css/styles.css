@@ -41,3 +41,13 @@
 .page-section:not(:first-child){border-top:1px solid var(--line)}
 html {scroll-behavior:smooth}
 @media(max-width:760px){.page-section{scroll-margin-top:85px}}
+
+/* V12 : navigation par rubriques, chacune commence sous le bandeau fixe. */
+:root{--header-offset:98px}
+html{scroll-padding-top:var(--header-offset)}
+.page-section{min-height:calc(100svh - var(--header-offset));scroll-margin-top:var(--header-offset)}
+#accueil{scroll-margin-top:var(--header-offset)}
+#accueil .hero{min-height:calc(100svh - var(--header-offset))}
+.page-section > .section{min-height:calc(100svh - var(--header-offset))}
+@media(max-width:970px){:root{--header-offset:78px}}
+@media(max-width:760px){:root{--header-offset:78px}#accueil .hero{min-height:calc(100svh - var(--header-offset))}}
