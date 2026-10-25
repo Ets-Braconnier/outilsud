@@ -51,3 +51,37 @@ html{scroll-padding-top:var(--header-offset)}
 .page-section > .section{min-height:calc(100svh - var(--header-offset))}
 @media(max-width:970px){:root{--header-offset:78px}}
 @media(max-width:760px){:root{--header-offset:78px}#accueil .hero{min-height:calc(100svh - var(--header-offset))}}
+
+/* V13 — Catalogue plus compact, sans rogner les fiches ni leurs boutons. */
+@media(min-width:761px){
+  #location .catalog-section{padding-block:28px 30px}
+  #location .section-heading{margin-bottom:16px}
+  #location .section-heading h1{font-size:clamp(2rem,3vw,2.75rem);margin-bottom:7px}
+  #location .section-heading .eyebrow{margin-bottom:8px}
+  #location .filters{margin-bottom:15px}
+  #location .filters input,#location .filters select{height:46px}
+  #location .machine-art{height:128px}
+  #location .machine-art svg{height:90px;width:115px}
+  #location .machine-content{padding:15px 17px}
+  #location .machine-content h2{font-size:1.17rem;margin-bottom:5px}
+  #location .machine-content p{font-size:.87rem;line-height:1.35;margin-bottom:8px}
+  #location .machine-meta{margin-bottom:10px;font-size:.75rem}
+  #location .machine-button{min-height:43px;padding:8px 7px;font-size:.86rem}
+  #location .catalog-pagination{margin:10px 0 0}
+}
+/* Aucun cadre à hauteur fixe ne masque la fin d'une rubrique. */
+#location,#apropos{height:auto;overflow:visible}
+#location>.section,#apropos>.section{height:auto;overflow:visible}
+/* Histoire : contenu intégral réécrit, lisible, et non des cartes-résumés. */
+.history-section{padding-block:55px 72px}
+.history-section h1{max-width:950px}
+.history-lead{font-size:1.24rem;max-width:820px;margin:20px 0 40px}
+.history-block{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.35fr);gap:50px;padding:30px 0;border-top:1px solid var(--line)}
+.history-block h2{font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ink)}
+.history-block p{line-height:1.72}
+.history-block .eyebrow{margin-bottom:10px}
+.history-partner{display:grid;grid-template-columns:1.5fr .6fr;align-items:center;gap:40px;background:var(--soft);border-radius:18px;padding:35px;margin-top:24px}
+.history-partner img{width:100%;max-width:240px;justify-self:center}
+.history-partner li{margin-bottom:8px;color:var(--muted)}
+.history-partner a{color:var(--blue);text-decoration:underline}
+@media(max-width:760px){.history-block,.history-partner{grid-template-columns:1fr;gap:12px}.history-section{padding-block:38px}.history-lead{font-size:1.05rem}}
