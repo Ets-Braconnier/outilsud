@@ -104,3 +104,19 @@ html{scroll-padding-top:var(--header-offset)}
 .services-note h2{font-size:1.5rem}.services-note p{margin-bottom:0}
 @media(max-width:1100px){#accueil .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){#accueil .feature-grid,.service-detail{grid-template-columns:1fr}.service-detail{gap:12px;padding:14px}.services-note{display:block}.services-note .actions{margin-top:18px}.services-section{padding-block:40px}}
+
+/* V15 : accueil Services puis deux rubriques indépendantes et complètes */
+#services,#atelier,#hydraulique{min-height:calc(100vh - 105px);height:auto;overflow:visible;scroll-margin-top:105px}
+#services>.section,#atelier>.section,#hydraulique>.section{min-height:calc(100vh - 105px);height:auto;overflow:visible}
+.services-hub,.service-full-page{padding-block:clamp(42px,6vh,85px)}
+.services-hub h1,.service-full-page h1{font-size:clamp(2rem,4vw,3.7rem);line-height:1.13}
+.services-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:36px}
+.services-choice{display:block;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.services-choice:hover{transform:translateY(-3px);box-shadow:0 10px 28px #151b3914}
+.services-choice img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;background:var(--soft)}
+.services-choice-copy{padding:25px 28px 30px}.services-choice-copy h2{font-size:clamp(1.35rem,2vw,1.8rem);margin:8px 0}.services-choice-copy p{line-height:1.6}.services-choice-copy strong{display:block;margin-top:22px;color:var(--blue)}
+.service-page-lead{max-width:920px;font-size:clamp(1.08rem,1.7vw,1.28rem);line-height:1.65;margin:22px 0 38px}
+.service-page-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:clamp(25px,4vw,65px)}
+.service-page-layout>img{width:100%;height:auto;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:var(--soft)}
+.service-page-content h2{font-size:clamp(1.45rem,2.6vw,2.15rem);margin:0 0 18px}.service-page-content p{line-height:1.7}.service-page-content ul{padding-left:22px;line-height:1.85;margin:18px 0 25px}.service-page-content li{margin-bottom:5px}.service-page-content .actions{margin-top:25px;flex-wrap:wrap}
+@media(max-width:800px){.services-choice-grid,.service-page-layout{grid-template-columns:1fr}.services-choice img{aspect-ratio:16/8}.service-page-layout>img{max-height:350px}.services-choice-copy{padding:20px}}

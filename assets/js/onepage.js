@@ -1,7 +1,7 @@
 /** Charge les rubriques du site, conservées dans des fichiers distincts. */
 import './common.js';
 
-const sections = ['index','location','vente','services','apropos','contact','demande'];
+const sections = ['index','location','vente','services','atelier','hydraulique','apropos','contact','demande'];
 const idFor = name => name === 'index' ? 'accueil' : name;
 
 async function init() {
