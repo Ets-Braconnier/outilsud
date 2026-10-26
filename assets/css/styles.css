@@ -136,3 +136,28 @@ body.service-focus .page-section.service-active{display:block!important;min-heig
 body.service-focus .page-section.service-active>.section{min-height:calc(100svh - var(--header-offset))}
 @media(max-width:1100px){.services-compact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.services-compact-grid{grid-template-columns:1fr}.services-compact-card{min-height:170px}}
+
+/* V17: le menu Services vise UNIQUEMENT les quatre cartes de l'accueil. */
+#accueil #services{scroll-margin-top:var(--header-offset);min-height:0;height:auto;overflow:visible;padding-block:clamp(24px,4vh,44px)}
+#accueil #services>.container{min-height:0}
+#accueil #services .feature-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+#accueil #services .feature{display:flex;flex-direction:column;min-height:225px;padding:22px 24px}
+#accueil #services .feature h2{margin:12px 0;font-size:1.32rem}
+#accueil #services .feature p{margin-bottom:18px}
+#accueil #services .feature b{margin-top:auto}
+@media(max-width:1080px){#accueil #services .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){#accueil #services .feature-grid{grid-template-columns:1fr}#accueil #services .feature{min-height:170px}}
+
+/* V18 : les deux rubriques de services reprennent la mise en page de Vente. */
+.service-sales-layout{padding-block:clamp(48px,7vh,88px);min-height:calc(100svh - var(--header-offset, 105px))}
+.service-sales-layout .split{align-items:start;gap:clamp(25px,5vw,80px)}
+.service-sales-layout h1{font-size:clamp(2rem,3.6vw,3.5rem);line-height:1.13}
+.service-sales-layout h2{font-size:clamp(1.25rem,2vw,1.65rem);margin:26px 0 12px}
+.service-sales-layout p{line-height:1.65}
+.service-sales-layout .service-list{padding-left:22px;line-height:1.75;margin:18px 0 25px}
+.service-sales-layout .service-list li{margin-bottom:7px}
+.service-sales-layout .service-sales-visual img{display:block;width:100%;height:auto;max-height:510px;object-fit:contain;border-radius:18px;border:1px solid var(--line);background:var(--soft)}
+.service-sales-layout .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+@media(max-width:760px){.service-sales-layout .split{display:grid;grid-template-columns:1fr}.service-sales-layout .service-sales-visual{order:-1}.service-sales-layout .service-sales-visual img{max-height:250px}}
+/* Supprimer les effets de hauteur hérités de l'ancien hub. */
+#accueil #services{min-height:0!important}

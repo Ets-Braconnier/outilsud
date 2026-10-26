@@ -1,7 +1,7 @@
 /** Charge les rubriques du site, conservées dans des fichiers distincts. */
 import './common.js';
 
-const sections = ['index','location','vente','services','atelier','hydraulique','apropos','contact','demande'];
+const sections = ['index','location','vente','atelier','hydraulique','apropos','contact','demande'];
 const idFor = name => name === 'index' ? 'accueil' : name;
 
 async function init() {
@@ -36,7 +36,7 @@ async function init() {
     if (!target) return;
     const header = document.querySelector('.site-header');
     const offset = header ? header.getBoundingClientRect().height : 0;
-    const top = window.scrollY + target.getBoundingClientRect().top - offset;
+    const top = (id === 'atelier' || id === 'hydraulique') ? 0 : window.scrollY + target.getBoundingClientRect().top - offset;
     window.scrollTo({top: Math.max(0, top), behavior});
   }
   document.addEventListener('click', event => {
