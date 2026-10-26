@@ -182,3 +182,6 @@ body.detail-mode .site-footer{display:none}
 .service-v19 .shop-slideshow{width:100%;align-self:center;aspect-ratio:1.55}
 .service-v19 .shop-slideshow>img{object-fit:cover}
 @media(max-width:760px){.service-v19 .split{grid-template-columns:1fr}.service-v19 .shop-slideshow{order:0}.service-v19 h1{font-size:2rem}}
+
+/* V20 : Services reste dans la page d'accueil : navigation par défilement */
+#services{scroll-margin-top:calc(var(--header-offset, 105px) + 10px)}

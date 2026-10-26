@@ -2,7 +2,7 @@
 import './common.js';
 const names=['index','location','vente','atelier','hydraulique','apropos','contact','demande'];
 const idFor=n=>n==='index'?'accueil':n;
-const standalone=new Set(['services','atelier','hydraulique']);
+const standalone=new Set(['atelier','hydraulique']);
 async function init(){
  const fragments=await Promise.all(names.map(async n=>{
   const r=await fetch(`sections/${n}.html`,{cache:'no-cache'});
@@ -17,7 +17,7 @@ async function init(){
   const focus=standalone.has(id);
   document.body.classList.toggle('detail-mode',focus);
   document.querySelectorAll('#main>.page-section').forEach(el=>{
-   const visible=id==='services'?el.id==='accueil':el.id===id;
+   const visible=el.id===id;
    el.classList.toggle('detail-visible',focus&&visible);
   });
   document.querySelectorAll('.main-nav a').forEach(a=>{
