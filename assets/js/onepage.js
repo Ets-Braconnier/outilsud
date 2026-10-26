@@ -1,68 +1,50 @@
-/** Charge les rubriques du site, conservées dans des fichiers distincts. */
+/** Outilsud : sections distinctes dans les fichiers, affichage autonome par rubrique. */
 import './common.js';
-
-const sections = ['index','location','vente','atelier','hydraulique','apropos','contact','demande'];
-const idFor = name => name === 'index' ? 'accueil' : name;
-
-async function init() {
-  const fragments = await Promise.all(sections.map(async name => {
-    const response = await fetch(`sections/${name}.html`, {cache: 'no-cache'});
-    if (!response.ok) throw new Error(`Impossible de charger ${name} (${response.status})`);
-    return response.text();
-  }));
-  sections.forEach((name, i) => {
-    document.getElementById(idFor(name)).innerHTML = fragments[i];
+const names=['index','location','vente','atelier','hydraulique','apropos','contact','demande'];
+const idFor=n=>n==='index'?'accueil':n;
+const standalone=new Set(['services','atelier','hydraulique']);
+async function init(){
+ const fragments=await Promise.all(names.map(async n=>{
+  const r=await fetch(`sections/${n}.html`,{cache:'no-cache'});
+  if(!r.ok)throw new Error(`Section ${n} : HTTP ${r.status}`);
+  return r.text();
+ }));
+ names.forEach((n,i)=>{document.getElementById(idFor(n)).innerHTML=fragments[i]});
+ await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js'),import('./request.js')]);
+ await import('./service-gallery.js');
+ function route(hash,behavior='instant'){
+  const id=(hash||'#accueil').replace(/^#/,'');
+  const focus=standalone.has(id);
+  document.body.classList.toggle('detail-mode',focus);
+  document.querySelectorAll('#main>.page-section').forEach(el=>{
+   const visible=id==='services'?el.id==='accueil':el.id===id;
+   el.classList.toggle('detail-visible',focus&&visible);
   });
-
-  await import('./location.js');
-  await import('./gallery.js');
-  await import('./contact.js');
-  await import('./request.js');
-
-  // Les deux fiches techniques s'ouvrent comme de vraies pages complètes.
-  // Les autres liens retrouvent le site défilant normalement.
-  function applyServiceView(hash) {
-    const name = (hash || '').replace(/^#/, '');
-    const detail = name === 'atelier' || name === 'hydraulique';
-    document.body.classList.toggle('service-focus', detail);
-    document.querySelectorAll('.page-section').forEach(el => {
-      el.classList.toggle('service-active', detail && el.id === name);
-    });
-  }
-  // Calculer la hauteur réelle du menu évite de masquer le début des sections.
-  function scrollToSection(hash, behavior = 'smooth') {
-    const id = decodeURIComponent(hash.replace(/^#/, ''));
-    const target = document.getElementById(id);
-    if (!target) return;
-    const header = document.querySelector('.site-header');
-    const offset = header ? header.getBoundingClientRect().height : 0;
-    const top = (id === 'atelier' || id === 'hydraulique') ? 0 : window.scrollY + target.getBoundingClientRect().top - offset;
-    window.scrollTo({top: Math.max(0, top), behavior});
-  }
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[href^="#"]');
-    if (!link) return;
-    const hash = link.getAttribute('href');
-    if (!hash || !document.getElementById(hash.slice(1))) return;
-    event.preventDefault();
-    document.querySelector('.main-nav')?.classList.remove('open');
-    document.querySelector('.menu-toggle')?.setAttribute('aria-expanded','false');
-    if (location.hash !== hash) history.pushState(null, '', hash);
-    applyServiceView(hash);
-    requestAnimationFrame(() => scrollToSection(hash));
+  document.querySelectorAll('.main-nav a').forEach(a=>{
+   const active=a.getAttribute('href')===(id==='atelier'||id==='hydraulique'?'#services':'#'+id);
+   if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
-  window.addEventListener('popstate', () => {
-    applyServiceView(location.hash);
-    requestAnimationFrame(() => scrollToSection(location.hash || '#accueil', 'instant'));
+  const target=document.getElementById(id);
+  if(!target)return;
+  requestAnimationFrame(()=>{
+   if(focus){window.scrollTo({top:0,behavior:'instant'});return}
+   const header=document.querySelector('.site-header')?.getBoundingClientRect().height||0;
+   const y=window.scrollY+target.getBoundingClientRect().top-header;
+   window.scrollTo({top:Math.max(0,y),behavior});
   });
-  applyServiceView(location.hash);
-  if (location.hash) {
-    requestAnimationFrame(() => scrollToSection(location.hash, 'instant'));
-  }
-
+ }
+ document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="#"]');
+  if(!a)return;
+  const hash=a.getAttribute('href');
+  if(!hash||!document.getElementById(hash.slice(1)))return;
+  e.preventDefault();
+  document.querySelector('.main-nav')?.classList.remove('open');
+  document.querySelector('.menu-toggle')?.setAttribute('aria-expanded','false');
+  history.pushState(null,'',hash);
+  route(hash,'smooth');
+ });
+ window.addEventListener('popstate',()=>route(location.hash));
+ route(location.hash);
 }
-init().catch(error => {
-  console.error(error);
-  document.getElementById('main').innerHTML =
-    '<section class="section container"><h1>Chargement impossible</h1><p>Veuillez actualiser la page.</p></section>';
-});
+init().catch(err=>{console.error(err);document.getElementById('main').innerHTML='<section class="section container"><h1>Chargement impossible</h1><p>Veuillez actualiser.</p></section>'});

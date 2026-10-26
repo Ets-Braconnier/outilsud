@@ -161,3 +161,24 @@ body.service-focus .page-section.service-active>.section{min-height:calc(100svh 
 @media(max-width:760px){.service-sales-layout .split{display:grid;grid-template-columns:1fr}.service-sales-layout .service-sales-visual{order:-1}.service-sales-layout .service-sales-visual img{max-height:250px}}
 /* Supprimer les effets de hauteur hérités de l'ancien hub. */
 #accueil #services{min-height:0!important}
+
+/* V19 — pages autonomes Services, Atelier et Hydraulique */
+body.detail-mode #main>.page-section{display:none!important}
+body.detail-mode #main>.page-section.detail-visible{display:block!important;min-height:calc(100svh - var(--header-offset))}
+body.detail-mode #main>#accueil.detail-visible>.hero,
+body.detail-mode #main>#accueil.detail-visible>.partner-band{display:none!important}
+body.detail-mode #main>#accueil.detail-visible #services{display:block!important;min-height:calc(100svh - var(--header-offset))!important;padding:clamp(28px,5vh,60px) 0!important;scroll-margin-top:0!important}
+body.detail-mode #main>#accueil.detail-visible{min-height:calc(100svh - var(--header-offset))}
+body.detail-mode #main>#accueil.detail-visible #services .feature-grid{align-content:center}
+body.detail-mode .site-footer{display:none}
+.service-v19{padding:clamp(28px,4vh,52px) 0!important;min-height:calc(100svh - var(--header-offset))!important}
+.service-v19 .split{align-items:center;gap:clamp(25px,4vw,58px);min-height:0}
+.service-v19 h1{font-size:clamp(1.85rem,3.2vw,3.1rem);margin-bottom:17px}
+.service-v19 h2{font-size:clamp(1.1rem,1.7vw,1.4rem);margin:17px 0 8px}
+.service-v19 p{font-size:clamp(.95rem,1.15vw,1.05rem);line-height:1.5;margin-bottom:12px}
+.service-v19 .service-list{margin:12px 0 18px;line-height:1.5}
+.service-v19 .service-list li{margin-bottom:3px}
+.service-v19 .actions{margin-top:16px}
+.service-v19 .shop-slideshow{width:100%;align-self:center;aspect-ratio:1.55}
+.service-v19 .shop-slideshow>img{object-fit:cover}
+@media(max-width:760px){.service-v19 .split{grid-template-columns:1fr}.service-v19 .shop-slideshow{order:0}.service-v19 h1{font-size:2rem}}
