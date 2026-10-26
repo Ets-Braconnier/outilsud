@@ -12,14 +12,11 @@ async function init(){
  names.forEach((n,i)=>{document.getElementById(idFor(n)).innerHTML=fragments[i]});
  await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js'),import('./request.js')]);
  await import('./service-gallery.js');
+ // Toutes les rubriques restent dans le même document : aucune vue isolée.
  function route(hash,behavior='instant'){
   const id=(hash||'#accueil').replace(/^#/,'');
-  const focus=standalone.has(id);
-  document.body.classList.toggle('detail-mode',focus);
-  document.querySelectorAll('#main>.page-section').forEach(el=>{
-   const visible=el.id===id;
-   el.classList.toggle('detail-visible',focus&&visible);
-  });
+  document.body.classList.remove('detail-mode','service-focus');
+  document.querySelectorAll('#main>.page-section').forEach(el=>el.classList.remove('detail-visible','service-active'));
   document.querySelectorAll('.main-nav a').forEach(a=>{
    const active=a.getAttribute('href')===(id==='atelier'||id==='hydraulique'?'#services':'#'+id);
    if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
@@ -27,10 +24,15 @@ async function init(){
   const target=document.getElementById(id);
   if(!target)return;
   requestAnimationFrame(()=>{
-   if(focus){window.scrollTo({top:0,behavior:'instant'});return}
    const header=document.querySelector('.site-header')?.getBoundingClientRect().height||0;
-   const y=window.scrollY+target.getBoundingClientRect().top-header;
-   window.scrollTo({top:Math.max(0,y),behavior});
+   let top=window.scrollY+target.getBoundingClientRect().top-header;
+   if(id==='services'){
+    // Cadrage voulu : fin de la vidéo, bandeau Braconnier, puis les quatre cartes.
+    const band=document.querySelector('#accueil .partner-band');
+    if(band)top=window.scrollY+band.getBoundingClientRect().top-Math.min(190,window.innerHeight*.20)-header;
+   }
+   if(id==='accueil')top=0;
+   window.scrollTo({top:Math.max(0,top),behavior});
   });
  }
  document.addEventListener('click',e=>{

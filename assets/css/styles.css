@@ -185,3 +185,8 @@ body.detail-mode .site-footer{display:none}
 
 /* V20 : Services reste dans la page d'accueil : navigation par défilement */
 #services{scroll-margin-top:calc(var(--header-offset, 105px) + 10px)}
+
+/* V21 : navigation par défilement uniquement, sans masquer les sections */
+body #main>.page-section{display:block!important}
+body .site-footer{display:block!important}
+#accueil #services{min-height:0!important}
