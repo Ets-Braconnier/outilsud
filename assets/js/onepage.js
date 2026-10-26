@@ -19,6 +19,16 @@ async function init() {
   await import('./contact.js');
   await import('./request.js');
 
+  // Les deux fiches techniques s'ouvrent comme de vraies pages complètes.
+  // Les autres liens retrouvent le site défilant normalement.
+  function applyServiceView(hash) {
+    const name = (hash || '').replace(/^#/, '');
+    const detail = name === 'atelier' || name === 'hydraulique';
+    document.body.classList.toggle('service-focus', detail);
+    document.querySelectorAll('.page-section').forEach(el => {
+      el.classList.toggle('service-active', detail && el.id === name);
+    });
+  }
   // Calculer la hauteur réelle du menu évite de masquer le début des sections.
   function scrollToSection(hash, behavior = 'smooth') {
     const id = decodeURIComponent(hash.replace(/^#/, ''));
@@ -38,11 +48,14 @@ async function init() {
     document.querySelector('.main-nav')?.classList.remove('open');
     document.querySelector('.menu-toggle')?.setAttribute('aria-expanded','false');
     if (location.hash !== hash) history.pushState(null, '', hash);
-    scrollToSection(hash);
+    applyServiceView(hash);
+    requestAnimationFrame(() => scrollToSection(hash));
   });
   window.addEventListener('popstate', () => {
-    scrollToSection(location.hash || '#accueil', 'instant');
+    applyServiceView(location.hash);
+    requestAnimationFrame(() => scrollToSection(location.hash || '#accueil', 'instant'));
   });
+  applyServiceView(location.hash);
   if (location.hash) {
     requestAnimationFrame(() => scrollToSection(location.hash, 'instant'));
   }

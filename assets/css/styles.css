@@ -120,3 +120,19 @@ html{scroll-padding-top:var(--header-offset)}
 .service-page-layout>img{width:100%;height:auto;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:var(--soft)}
 .service-page-content h2{font-size:clamp(1.45rem,2.6vw,2.15rem);margin:0 0 18px}.service-page-content p{line-height:1.7}.service-page-content ul{padding-left:22px;line-height:1.85;margin:18px 0 25px}.service-page-content li{margin-bottom:5px}.service-page-content .actions{margin-top:25px;flex-wrap:wrap}
 @media(max-width:800px){.services-choice-grid,.service-page-layout{grid-template-columns:1fr}.services-choice img{aspect-ratio:16/8}.service-page-layout>img{max-height:350px}.services-choice-copy{padding:20px}}
+
+/* V16 : page Services = quatre cartes compactes et cliquables */
+.services-hub{padding-top:clamp(32px,5vh,65px);padding-bottom:clamp(35px,6vh,70px)}
+.services-hub .services-intro{max-width:980px;margin-bottom:24px}
+.services-compact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.services-compact-card{display:flex;flex-direction:column;min-height:225px;padding:22px 20px;border:1px solid var(--line);border-radius:18px;background:#fff;color:inherit;text-decoration:none;transition:border-color .2s,transform .2s,box-shadow .2s}
+.services-compact-card:hover,.services-compact-card:focus-visible{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 8px 20px #151b3910}
+.services-compact-card h2{font-size:clamp(1.1rem,1.6vw,1.45rem);line-height:1.25;margin:15px 0 12px}
+.services-compact-card p{font-size:1rem;line-height:1.5;margin:0 0 22px}
+.services-compact-card strong{margin-top:auto;color:var(--blue)}
+/* Sur une fiche de service, cacher les autres rubriques : vraie page autonome. */
+body.service-focus .page-section{display:none!important}
+body.service-focus .page-section.service-active{display:block!important;min-height:calc(100svh - var(--header-offset))}
+body.service-focus .page-section.service-active>.section{min-height:calc(100svh - var(--header-offset))}
+@media(max-width:1100px){.services-compact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.services-compact-grid{grid-template-columns:1fr}.services-compact-card{min-height:170px}}
