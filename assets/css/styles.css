@@ -85,3 +85,22 @@ html{scroll-padding-top:var(--header-offset)}
 .history-partner li{margin-bottom:8px;color:var(--muted)}
 .history-partner a{color:var(--blue);text-decoration:underline}
 @media(max-width:760px){.history-block,.history-partner{grid-template-columns:1fr;gap:12px}.history-section{padding-block:38px}.history-lead{font-size:1.05rem}}
+
+/* V14 : quatre activités et présentation complète des services */
+#accueil .feature-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#accueil .feature{padding:22px;min-height:225px;display:flex;flex-direction:column}
+#accueil .feature h2{font-size:1.22rem;margin:12px 0}
+#accueil .feature b{margin-top:auto}
+.services-section{padding-block:58px 78px}
+.services-intro{max-width:880px;font-size:1.15rem;line-height:1.7;margin:18px 0 38px}
+.service-showcase{display:grid;gap:34px}
+.service-detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:36px;align-items:center;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.service-detail>img{width:100%;height:auto;aspect-ratio:720/420;object-fit:cover;border-radius:14px}
+.service-copy{padding:10px 12px}
+.service-copy h2{font-size:clamp(1.45rem,2.6vw,2.15rem);margin:8px 0 14px}
+.service-copy p{line-height:1.7}
+.service-copy ul{padding-left:21px;margin:18px 0 26px;line-height:1.85;color:var(--muted)}
+.services-note{margin-top:34px;padding:30px;background:var(--soft);border-radius:18px;display:flex;justify-content:space-between;align-items:center;gap:22px}
+.services-note h2{font-size:1.5rem}.services-note p{margin-bottom:0}
+@media(max-width:1100px){#accueil .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){#accueil .feature-grid,.service-detail{grid-template-columns:1fr}.service-detail{gap:12px;padding:14px}.services-note{display:block}.services-note .actions{margin-top:18px}.services-section{padding-block:40px}}
