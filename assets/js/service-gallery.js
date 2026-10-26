@@ -1,23 +1,27 @@
-/** Diaporamas séparés. Photos existantes du magasin, à remplacer par photos métier. */
+/** Diaporamas de chaque service. Les photos hydrauliques et vêtements sont dans le dépôt GitHub. */
 const collections={
- atelier:['8.png','9.3.png','9.9.5.png'],
- hydraulique:['9.9.4.png','2.png','9.9.png']
+ atelier:['assets/images/magasin/8.png','assets/images/magasin/9.3.png','assets/images/magasin/9.9.5.png'],
+ hydraulique:Array.from({length:6},(_,i)=>`assets/images/hydraulique/hydraulique-${i+1}.jpg`),
+ vetements:['assets/images/vetements/vetements-1.jpg','assets/images/vetements/vetements-2.jpg','assets/images/vetements/vetement-3.jpg'],
+ amenagement:['assets/images/magasin/2.png','assets/images/magasin/3.png','assets/images/magasin/4.png'],
+ affutage:['assets/images/magasin/5.png','assets/images/magasin/6.png','assets/images/magasin/7.png']
 };
 document.querySelectorAll('[data-gallery]').forEach(root=>{
- const images=collections[root.dataset.gallery]||[];
+ const files=collections[root.dataset.gallery]||[];
  const img=root.querySelector('img'),count=root.querySelector('.service-count');
  let i=0,timer;
- const show=n=>{
-  i=(n+images.length)%images.length;
-  img.src='assets/images/magasin/'+encodeURIComponent(images[i]);
-  img.alt=`Photo Outilsud ${i+1} sur ${images.length} (illustration)`;
-  count.textContent=`${i+1} / ${images.length}`;
- };
- const start=()=>{
+ function show(n){
+  i=(n+files.length)%files.length;
+  img.src=files[i];
+  img.alt=`Photo ${i+1} sur ${files.length} — ${root.dataset.gallery}`;
+  count.textContent=`${i+1} / ${files.length}`;
+ }
+ function start(){
   clearInterval(timer);
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>show(i+1),4500);
- };
- root.querySelector('.service-prev').addEventListener('click',()=>{show(i-1);start()});
- root.querySelector('.service-next').addEventListener('click',()=>{show(i+1);start()});
- show(0);start();
+  if(files.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches)
+   timer=setInterval(()=>show(i+1),4500);
+ }
+ root.querySelector('.service-prev')?.addEventListener('click',()=>{show(i-1);start()});
+ root.querySelector('.service-next')?.addEventListener('click',()=>{show(i+1);start()});
+ if(files.length){show(0);start()}
 });

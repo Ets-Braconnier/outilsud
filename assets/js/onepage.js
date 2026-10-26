@@ -1,6 +1,6 @@
 /** Outilsud : sections distinctes dans les fichiers, affichage autonome par rubrique. */
 import './common.js';
-const names=['index','location','vente','atelier','hydraulique','apropos','contact','demande'];
+const names=['index','location','vente','atelier','hydraulique','amenagement','vetements','affutage','apropos','contact','demande'];
 const idFor=n=>n==='index'?'accueil':n;
 const standalone=new Set(['atelier','hydraulique']);
 async function init(){
@@ -18,7 +18,7 @@ async function init(){
   document.body.classList.remove('detail-mode','service-focus');
   document.querySelectorAll('#main>.page-section').forEach(el=>el.classList.remove('detail-visible','service-active'));
   document.querySelectorAll('.main-nav a').forEach(a=>{
-   const active=a.getAttribute('href')===(id==='atelier'||id==='hydraulique'?'#services':'#'+id);
+   const active=a.getAttribute('href')===(['atelier','hydraulique','amenagement','vetements','affutage'].includes(id)?'#services':'#'+id);
    if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
   const target=document.getElementById(id);
