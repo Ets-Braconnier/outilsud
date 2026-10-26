@@ -12,6 +12,28 @@ async function init(){
  names.forEach((n,i)=>{document.getElementById(idFor(n)).innerHTML=fragments[i]});
  await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js'),import('./request.js')]);
  await import('./service-gallery.js');
+ // Carrousel Services : 4 cartes visibles sur grand écran, une rangée uniquement.
+ const track=document.getElementById('services-carousel-track');
+ const prev=document.querySelector('.services-carousel-prev');
+ const next=document.querySelector('.services-carousel-next');
+ if(track&&prev&&next){
+   const update=()=>{
+     prev.disabled=track.scrollLeft<=2;
+     next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-2;
+   };
+   const move=dir=>{
+     const first=track.querySelector('.feature');
+     if(!first)return;
+     const gap=parseFloat(getComputedStyle(track).gap)||0;
+     track.scrollBy({left:dir*(first.getBoundingClientRect().width+gap),behavior:'smooth'});
+   };
+   prev.addEventListener('click',()=>move(-1));
+   next.addEventListener('click',()=>move(1));
+   track.addEventListener('scroll',update,{passive:true});
+   window.addEventListener('resize',update);
+   update();
+ }
+
  // Toutes les rubriques restent dans le même document : aucune vue isolée.
  function route(hash,behavior='instant'){
   const id=(hash||'#accueil').replace(/^#/,'');

@@ -196,3 +196,38 @@ body .site-footer{display:block!important}
 #services .feature{min-width:0}
 @media(max-width:1100px){#services .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){#services .feature-grid{grid-template-columns:1fr}}
+
+/* V23 : toutes les activités sur UNE seule ligne, navigation par flèches. */
+#accueil #services .services-carousel-shell{
+  display:grid;grid-template-columns:42px minmax(0,1fr) 42px;
+  align-items:center;gap:12px;
+}
+#accueil #services .services-carousel-viewport{min-width:0;overflow:hidden}
+#accueil #services .services-carousel-track{
+  display:flex!important;grid-template-columns:none!important;gap:18px;
+  overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  scrollbar-width:none;overscroll-behavior-x:contain;
+}
+#accueil #services .services-carousel-track::-webkit-scrollbar{display:none}
+#accueil #services .services-carousel-track>.feature{
+  box-sizing:border-box;flex:0 0 calc((100% - 54px)/4);
+  min-width:0;scroll-snap-align:start;
+}
+#accueil #services .services-carousel-arrow{
+  display:grid;place-items:center;width:42px;height:42px;padding:0;
+  border:1px solid var(--line);border-radius:50%;background:#fff;
+  color:var(--blue);font-size:32px;line-height:1;cursor:pointer;
+}
+#accueil #services .services-carousel-arrow:disabled{opacity:.25;cursor:default}
+#accueil #services .services-carousel-arrow:not(:disabled):hover{background:var(--soft)}
+@media(max-width:1100px){
+ #accueil #services .services-carousel-track>.feature{flex-basis:calc((100% - 18px)/2)}
+}
+@media(max-width:640px){
+ #accueil #services .services-carousel-shell{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}
+ #accueil #services .services-carousel-track>.feature{flex-basis:100%}
+ #accueil #services .services-carousel-arrow{width:34px;height:34px}
+}
+@media(prefers-reduced-motion:reduce){
+ #accueil #services .services-carousel-track{scroll-behavior:auto}
+}
