@@ -19,7 +19,7 @@ export function showToast(message) {
   clearTimeout(showToast.timeout); showToast.timeout = setTimeout(() => node.classList.remove('show'), 4000);
 }
 // Renseigner une adresse de destination vérifiée avant de publier les formulaires.
-export const CONTACT_EMAIL = '';
+export const CONTACT_EMAIL = 'info@outilsud.be';
 export function prepareEmail(subject, body) {
   if (!CONTACT_EMAIL) {
     showToast('Adresse e-mail destinataire non configurée. Consultez assets/js/common.js.');

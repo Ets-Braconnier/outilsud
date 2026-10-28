@@ -6,8 +6,8 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Outilsud : vente, location et réparation de machines, fabrication de flexibles hydrauliques pour particuliers et professionnels." name="description"/>
 <title>Accueil | Outilsud</title>
-<link href="assets/css/styles.css?v=25" rel="stylesheet"/>
-<script src="assets/js/onepage.js?v=25" type="module"></script></head>
+<link href="assets/css/styles.css?v=27" rel="stylesheet"/>
+<script src="assets/js/onepage.js?v=27" type="module"></script></head>
 <body>
 <header class="site-header">
 <div class="container header-inner">
@@ -17,7 +17,120 @@
 <a class="cart-link" href="#contact" data-contact-service="location">Ma demande <span id="cartCount">0</span></a>
 </div>
 </header>
-<main id="main"><div class="page-section" data-section="index" id="accueil"></div><div class="page-section" data-section="location" id="location"></div><div class="page-section" data-section="vente" id="vente"></div><div class="page-section" data-section="atelier" id="atelier"></div><div class="page-section" data-section="hydraulique" id="hydraulique"></div><div class="page-section" data-section="affutage" id="affutage"></div><div class="page-section" data-section="vetements" id="vetements"></div><div class="page-section" data-section="amenagement" id="amenagement"></div><div class="page-section" data-section="apropos" id="apropos"></div><div class="page-section" data-section="contact" id="contact"></div></main>
+<main id="main"><div class="page-section" data-section="index" id="accueil"></div><div class="page-section" data-section="location" id="location"></div><div class="page-section" data-section="vente" id="vente"></div><div class="page-section" data-section="atelier" id="atelier"></div><div class="page-section" data-section="hydraulique" id="hydraulique"></div><div class="page-section" data-section="affutage" id="affutage"></div><div class="page-section" data-section="vetements" id="vetements"></div><div class="page-section" data-section="amenagement" id="amenagement"></div><div class="page-section" data-section="apropos" id="apropos"></div><div class="page-section" data-section="contact" id="contact"><section class="section contact-section" aria-labelledby="contact-heading">
+<div class="container">
+<div class="contact-header">
+<h1 id="contact-heading">Contact</h1>
+<p>Une demande, le bon interlocuteur.</p>
+</div>
+<div class="contact-grid contact-panel">
+<div class="contact-context">
+<span class="contact-kicker">OUTILSUD · À VOTRE SERVICE</span>
+<h2 id="contactTitle">Votre demande</h2>
+<p id="contactHelp" aria-live="polite">
+</p>
+<div id="rentalSelection" hidden>
+<div class="selection" id="selection">
+</div>
+<a class="text-link" href="#location">← Choisir ou ajouter des machines</a>
+</div>
+<div class="contact-details">
+<div class="contact-address">
+<h3>Nous trouver</h3>
+<address>Route de Lonnoux 1<br>6880 Bertrix</address>
+<a href="tel:+3261288004">+32 (0)61 28 80 04</a>
+<a href="mailto:info@outilsud.be">info@outilsud.be</a>
+</div>
+<div class="contact-hours">
+<h3>Horaires d’ouverture</h3>
+<dl>
+<div>
+<dt>Lundi – jeudi</dt>
+<dd>07:30 – 12:00<br>13:00 – 17:30</dd>
+</div>
+<div>
+<dt>Vendredi</dt>
+<dd>07:30 – 12:00<br>13:00 – 17:00</dd>
+</div>
+<div>
+<dt>Samedi</dt>
+<dd>07:30 – 12:00</dd>
+</div>
+</dl>
+</div>
+<div class="contact-socials">
+<a href="https://www.facebook.com/Outilsud/" target="_blank" rel="noopener noreferrer" aria-label="Outilsud sur Facebook (nouvel onglet)">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path fill="currentColor" d="M14 21v-8h3l.5-3H14V8c0-.9.3-1.5 1.7-1.5H18V3.8c-.4-.1-1.7-.3-3-.3-3 0-5 1.8-5 5V10H7v3h3v8z"/>
+</svg>Facebook</a>
+<a href="https://www.instagram.com/outilsud/" target="_blank" rel="noopener noreferrer" aria-label="Outilsud sur Instagram (nouvel onglet)">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+<rect x="3" y="3" width="18" height="18" rx="5"/>
+<circle cx="12" cy="12" r="4"/>
+<circle cx="17.4" cy="6.6" r=".8" fill="currentColor" stroke="none"/>
+</svg>Instagram</a>
+</div>
+</div>
+</div>
+<form class="form-card" id="contactForm">
+<label>Votre demande concerne<select name="service" id="contactService">
+<option value="general">Une question générale</option>
+<option value="location">Location de machines</option>
+<option value="vente">Vente de matériel</option>
+<option value="atelier">Réparation et entretien</option>
+<option value="hydraulique">Hydraulique</option>
+<option value="amenagement">Aménagement de camionnettes</option>
+<option value="vetements">Vêtements de travail</option>
+<option value="affutage">Affûtage de lames</option>
+</select>
+</label>
+<div class="form-row">
+<label>Nom et prénom *<input name="name" autocomplete="name" required>
+</label>
+<label>Société<input name="company" autocomplete="organization">
+</label>
+</div>
+<div class="form-row">
+<label>E-mail *<input name="email" type="email" autocomplete="email" required>
+</label>
+<label>Téléphone<input name="phone" type="tel" autocomplete="tel">
+</label>
+</div>
+<fieldset id="rentalFields" hidden disabled>
+<legend>Période de location</legend>
+<div class="form-row">
+<label>Début souhaité *<input name="start" type="date" required>
+</label>
+<label>Fin souhaitée *<input name="end" type="date" required>
+</label>
+</div>
+</fieldset>
+<fieldset id="equipmentFields" hidden disabled>
+<legend id="equipmentLegend">Votre matériel</legend>
+<div class="form-row">
+<label>
+<span id="equipmentLabel">Matériel concerné</span>
+<input name="equipment">
+</label>
+<label>Marque / modèle ou référence<input name="reference">
+</label>
+</div>
+</fieldset>
+<label>
+<span id="messageLabel">Votre message *</span>
+<textarea name="message" rows="3" required>
+</textarea>
+</label>
+<div class="contact-submit">
+<label class="consent">
+<input required type="checkbox"> J’accepte que mes coordonnées soient utilisées pour répondre à ma demande.</label>
+<button class="btn btn-primary" type="submit">Préparer ma demande →</button>
+</div>
+<p class="fineprint">Ouverture dans votre messagerie · Demande sans engagement.</p>
+</form>
+</div>
+</div>
+</section></div></main>
 <footer class="site-footer"><div class="container footer-inner">
 <div><strong>OUTILSUD</strong><p>Vente et location de machines et d'outillage</p></div>
 <div class="footer-links"><a href="#contact">Contact</a></div>

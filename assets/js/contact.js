@@ -1,5 +1,5 @@
 /** One adaptive contact form, shared by all services. */
-import {$,escapeHtml,getSelection,saveSelection,prepareEmail,showToast} from './common.js';
+import {$,escapeHtml,getSelection,saveSelection,prepareEmail,showToast} from './common.js?v=27';
 const form=$('contactForm');
 let machines=[];
 const config={

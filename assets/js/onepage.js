@@ -1,16 +1,16 @@
 /** Outilsud : sections distinctes dans les fichiers, affichage autonome par rubrique. */
-import './common.js';
-const names=['index','location','vente','atelier','hydraulique','amenagement','vetements','affutage','apropos','contact'];
+import './common.js?v=27';
+const names=['index','location','vente','atelier','hydraulique','amenagement','vetements','affutage','apropos'];
 const idFor=n=>n==='index'?'accueil':n;
 const standalone=new Set(['atelier','hydraulique']);
 async function init(){
  const fragments=await Promise.all(names.map(async n=>{
-  const r=await fetch(`sections/${n}.html`,{cache:'no-cache'});
+  const r=await fetch(`sections/${n}.html?v=27`,{cache:'no-cache'});
   if(!r.ok)throw new Error(`Section ${n} : HTTP ${r.status}`);
   return r.text();
  }));
  names.forEach((n,i)=>{document.getElementById(idFor(n)).innerHTML=fragments[i]});
- await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js')]);
+ await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js?v=27')]);
  await import('./service-gallery.js');
  // Carrousel Services : 4 cartes visibles sur grand écran, une rangée uniquement.
  const track=document.getElementById('services-carousel-track');
