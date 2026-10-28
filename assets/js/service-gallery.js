@@ -4,7 +4,7 @@ const collections={
  hydraulique:Array.from({length:6},(_,i)=>`assets/images/hydraulique/hydraulique-${i+1}.avif`),
  vetements:['assets/images/vetements/vetements-1.avif','assets/images/vetements/vetements-2.avif','assets/images/vetements/vetement-3.avif'],
  amenagement:['assets/images/amenagement-camionnette/1.avif', 'assets/images/amenagement-camionnette/2.avif', 'assets/images/amenagement-camionnette/3.avif', 'assets/images/amenagement-camionnette/4.avif', 'assets/images/amenagement-camionnette/5.avif', 'assets/images/amenagement-camionnette/6.avif', 'assets/images/amenagement-camionnette/7.avif', 'assets/images/amenagement-camionnette/8.avif', 'assets/images/amenagement-camionnette/9.avif', 'assets/images/amenagement-camionnette/9.1.avif', 'assets/images/amenagement-camionnette/9.2.avif', 'assets/images/amenagement-camionnette/9.3.avif', 'assets/images/amenagement-camionnette/9.4.avif', 'assets/images/amenagement-camionnette/9.5.avif'],
- affutage:['assets/images/magasin/5.avif','assets/images/magasin/6.avif','assets/images/magasin/7.avif']
+ affutage:['assets/images/lames/1.avif','assets/images/lames/2.avif','assets/images/lames/3.avif']
 };
 document.querySelectorAll('[data-gallery]').forEach(root=>{
  const files=collections[root.dataset.gallery]||[];

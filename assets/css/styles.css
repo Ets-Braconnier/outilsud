@@ -346,3 +346,6 @@ body .site-footer{display:block!important}
 #apropos .history-family-photo{margin:0}
 #apropos .history-family-photo img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
 @media(max-width:760px){#apropos .history-intro-photo{grid-template-columns:1fr;gap:22px;margin-bottom:28px}#apropos .history-family-photo{width:100%;max-width:560px}}
+
+/* V36 : afficher les lames entières, sans recadrage */
+#affutage .service-slideshow>img{object-fit:contain;background:#fff}
