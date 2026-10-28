@@ -42,10 +42,12 @@ $('catalog').addEventListener('click', (event) => {
   const id = button.dataset.machine;
   if (selection.has(id)) selection.delete(id); else selection.add(id);
   saveSelection(selection); render();
+  window.dispatchEvent(new CustomEvent("contact-service",{detail:"location"}));
 });
 $('search').addEventListener('input', () => { page = 0; render(); });
 $('category').addEventListener('change', () => { page = 0; render(); });
 $('catalogPrev').addEventListener('click', () => { page -= 1; render(); });
 $('catalogNext').addEventListener('click', () => { page += 1; render(); });
 window.addEventListener('resize', render);
+window.addEventListener('selection-change',()=>{selection.clear();getSelection().forEach(id=>selection.add(id));render();});
 init();

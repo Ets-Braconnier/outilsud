@@ -1,6 +1,6 @@
 /** Outilsud : sections distinctes dans les fichiers, affichage autonome par rubrique. */
 import './common.js';
-const names=['index','location','vente','atelier','hydraulique','amenagement','vetements','affutage','apropos','contact','demande'];
+const names=['index','location','vente','atelier','hydraulique','amenagement','vetements','affutage','apropos','contact'];
 const idFor=n=>n==='index'?'accueil':n;
 const standalone=new Set(['atelier','hydraulique']);
 async function init(){
@@ -10,7 +10,7 @@ async function init(){
   return r.text();
  }));
  names.forEach((n,i)=>{document.getElementById(idFor(n)).innerHTML=fragments[i]});
- await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js'),import('./request.js')]);
+ await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js')]);
  await import('./service-gallery.js');
  // Carrousel Services : 4 cartes visibles sur grand écran, une rangée uniquement.
  const track=document.getElementById('services-carousel-track');
@@ -36,7 +36,9 @@ async function init(){
 
  // Toutes les rubriques restent dans le même document : aucune vue isolée.
  function route(hash,behavior='instant'){
-  const id=(hash||'#accueil').replace(/^#/,'');
+  const id=(hash==='#demande'?'#contact':hash||'#accueil').replace(/^#/,'');
+  if(hash==='#demande')window.dispatchEvent(new CustomEvent('contact-service',{detail:'location'}));
+  if(['location','vente','atelier','hydraulique','amenagement','vetements','affutage'].includes(id))window.dispatchEvent(new CustomEvent('contact-service',{detail:id}));
   document.body.classList.remove('detail-mode','service-focus');
   document.querySelectorAll('#main>.page-section').forEach(el=>el.classList.remove('detail-visible','service-active'));
   document.querySelectorAll('.main-nav a').forEach(a=>{

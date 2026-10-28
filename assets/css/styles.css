@@ -198,7 +198,7 @@ body .site-footer{display:block!important}
 @media(max-width:640px){#services .feature-grid{grid-template-columns:1fr}}
 
 /* V23 : toutes les activités sur UNE seule ligne, navigation par flèches. */
-#accueil #services .services-carousel-shell{
+#accueil #services.services-carousel-shell{
   display:grid;grid-template-columns:42px minmax(0,1fr) 42px;
   align-items:center;gap:12px;
 }
@@ -224,10 +224,13 @@ body .site-footer{display:block!important}
  #accueil #services .services-carousel-track>.feature{flex-basis:calc((100% - 18px)/2)}
 }
 @media(max-width:640px){
- #accueil #services .services-carousel-shell{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}
+ #accueil #services.services-carousel-shell{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}
  #accueil #services .services-carousel-track>.feature{flex-basis:100%}
  #accueil #services .services-carousel-arrow{width:34px;height:34px}
 }
 @media(prefers-reduced-motion:reduce){
  #accueil #services .services-carousel-track{scroll-behavior:auto}
 }
+
+/* V24 : formulaire commun */
+.form-card fieldset{border:0;padding:0;margin:0;min-width:0}.form-card fieldset[hidden]{display:none}.form-card select{width:100%;padding:13px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink)}

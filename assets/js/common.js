@@ -10,6 +10,7 @@ export function saveSelection(selection) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...selection])); }
   catch { showToast('Impossible de mémoriser la sélection dans ce navigateur.'); }
   updateCart();
+  window.dispatchEvent(new Event("selection-change"));
 }
 export function updateCart() { if ($('cartCount')) $('cartCount').textContent = getSelection().size; }
 export function showToast(message) {
