@@ -5,13 +5,13 @@ const idFor=n=>n==='index'?'accueil':n;
 const standalone=new Set(['atelier','hydraulique']);
 async function init(){
  const fragments=await Promise.all(names.map(async n=>{
-  const r=await fetch(`sections/${n}.html?v=29`,{cache:'no-cache'});
+  const r=await fetch(`sections/${n}.html?v=31`,{cache:'no-cache'});
   if(!r.ok)throw new Error(`Section ${n} : HTTP ${r.status}`);
   return r.text();
  }));
  names.forEach((n,i)=>{document.getElementById(idFor(n)).innerHTML=fragments[i]});
  await Promise.all([import('./location.js'),import('./gallery.js'),import('./contact.js?v=27')]);
- await import('./service-gallery.js');
+ await import('./service-gallery.js?v=31');
  // Carrousel Services : 4 cartes visibles sur grand écran, une rangée uniquement.
  const track=document.getElementById('services-carousel-track');
  const prev=document.querySelector('.services-carousel-prev');
