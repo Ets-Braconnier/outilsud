@@ -234,3 +234,50 @@ body .site-footer{display:block!important}
 
 /* V24 : formulaire commun */
 .form-card fieldset{border:0;padding:0;margin:0;min-width:0}.form-card fieldset[hidden]{display:none}.form-card select{width:100%;padding:13px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink)}
+
+/* V25 : contact compact et hiérarchisé */
+#contact .contact-section{padding:24px 0;display:flex;align-items:center}
+#contact .contact-header{display:flex;align-items:baseline;gap:22px;margin-bottom:18px}
+#contact .contact-header h1{font-size:1.9rem;line-height:1.1;margin:0}
+#contact .contact-header p{margin:0;font-size:.94rem}
+#contact .contact-panel{grid-template-columns:minmax(230px,.75fr) minmax(0,2fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 36px #1d284309}
+#contact .contact-context{padding:28px;background:linear-gradient(150deg,#f0f1fb,#f8f9fd);align-self:stretch;border-right:1px solid var(--line)}
+#contact .contact-kicker{display:block;font-size:.69rem;font-weight:800;letter-spacing:.1em;color:var(--blue);margin-bottom:26px}
+#contact #contactTitle{font-size:1.35rem;line-height:1.25;margin:0 0 12px}
+#contact #contactHelp{font-size:.9rem;line-height:1.55;margin:0}
+#contact .form-card{padding:22px 26px;border:0;border-radius:0;gap:11px}
+#contact .form-card label{font-size:.82rem;gap:4px;min-width:0}
+#contact .form-row{gap:14px}
+#contact .form-card input:not([type=checkbox]),#contact .form-card select{padding:9px 11px;height:39px;font-size:.9rem;min-width:0;background:#fcfcfe}
+#contact .form-card textarea{padding:9px 11px;height:76px;min-height:60px;resize:vertical;font-size:.9rem;background:#fcfcfe}
+#contact .form-card legend{font-weight:700;font-size:.8rem;margin-bottom:6px;color:var(--blue)}
+#contact .form-card input:focus,#contact .form-card select:focus,#contact .form-card textarea:focus{outline:2px solid #6664ad;outline-offset:2px}
+#contact .contact-submit{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:12px}
+#contact .form-card .consent{font-size:.72rem;line-height:1.4;max-width:320px}
+#contact .contact-submit .btn{font-size:.85rem;padding:11px 17px;white-space:nowrap;min-height:40px}
+#contact .fineprint{font-size:.7rem;line-height:1.35;margin:0}
+#contact .selection{margin:20px 0 12px;display:grid;gap:6px}
+#contact .selected-item{padding:7px 10px;margin:0;font-size:.82rem;background:#fff;gap:6px}
+#contact .selected-item button{width:25px;height:25px;flex-shrink:0}
+#contact .empty-selection{padding:12px;font-size:.85rem;background:#fff}
+#contact #rentalSelection .text-link{font-size:.8rem}
+@media(min-width:900px) and (max-height:780px){
+ #contact .contact-section{padding:16px 0}
+ #contact .contact-header{margin-bottom:12px}
+ #contact .form-card{gap:8px;padding:18px 22px}
+ #contact .form-card textarea{height:62px}
+ #contact .contact-context{padding:24px}
+}
+@media(max-width:899px){
+ #contact .contact-panel{grid-template-columns:1fr}
+ #contact .contact-context{padding:18px 22px;border-right:0;border-bottom:1px solid var(--line)}
+ #contact .contact-kicker{margin-bottom:10px}
+ #contact #contactTitle{font-size:1.15rem;margin-bottom:6px}
+ #contact .selection{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:12px}
+}
+@media(max-width:600px){
+ #contact .contact-header{display:block}#contact .contact-header p{margin-top:8px;font-size:.85rem}
+ #contact .form-card{padding:18px 16px}#contact .form-row{grid-template-columns:1fr 1fr;gap:10px}
+ #contact .contact-submit{align-items:stretch;flex-direction:column;gap:12px}
+ #contact .form-card .consent{max-width:none}#contact .selection{grid-template-columns:1fr}
+}
