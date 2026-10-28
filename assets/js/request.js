@@ -1,5 +1,5 @@
 /** Quote request page: persistent selected machines and email draft. */
-import {$, escapeHtml, getSelection, saveSelection, prepareEmail, showToast} from './common.js';
+import {$, escapeHtml, getSelection, saveSelection, prepareEmail, showToast} from './common.js?v=34';
 let machines = [];
 const selected = getSelection();
 function render() {

@@ -1,10 +1,10 @@
 /** Diaporamas de chaque service. Les photos hydrauliques et vêtements sont dans le dépôt GitHub. */
 const collections={
- atelier:['assets/images/magasin/8.png','assets/images/magasin/9.3.png','assets/images/magasin/9.9.5.png'],
- hydraulique:Array.from({length:6},(_,i)=>`assets/images/hydraulique/hydraulique-${i+1}.jpg`),
- vetements:['assets/images/vetements/vetements-1.jpg','assets/images/vetements/vetements-2.jpg','assets/images/vetements/vetement-3.jpg'],
- amenagement:['assets/images/amenagement-camionnette/1.jpg', 'assets/images/amenagement-camionnette/2.jpg', 'assets/images/amenagement-camionnette/3.jpg', 'assets/images/amenagement-camionnette/4.jpg', 'assets/images/amenagement-camionnette/5.jpg', 'assets/images/amenagement-camionnette/6.jpg', 'assets/images/amenagement-camionnette/7.jpg', 'assets/images/amenagement-camionnette/8.jpg', 'assets/images/amenagement-camionnette/9.jpg', 'assets/images/amenagement-camionnette/9.1.jpg', 'assets/images/amenagement-camionnette/9.2.jpg', 'assets/images/amenagement-camionnette/9.3.jpg', 'assets/images/amenagement-camionnette/9.4.jpg', 'assets/images/amenagement-camionnette/9.5.jpg'],
- affutage:['assets/images/magasin/5.png','assets/images/magasin/6.png','assets/images/magasin/7.png']
+ atelier:['assets/images/magasin/8.avif','assets/images/magasin/9.3.avif','assets/images/magasin/9.9.5.avif'],
+ hydraulique:Array.from({length:6},(_,i)=>`assets/images/hydraulique/hydraulique-${i+1}.avif`),
+ vetements:['assets/images/vetements/vetements-1.avif','assets/images/vetements/vetements-2.avif','assets/images/vetements/vetement-3.avif'],
+ amenagement:['assets/images/amenagement-camionnette/1.avif', 'assets/images/amenagement-camionnette/2.avif', 'assets/images/amenagement-camionnette/3.avif', 'assets/images/amenagement-camionnette/4.avif', 'assets/images/amenagement-camionnette/5.avif', 'assets/images/amenagement-camionnette/6.avif', 'assets/images/amenagement-camionnette/7.avif', 'assets/images/amenagement-camionnette/8.avif', 'assets/images/amenagement-camionnette/9.avif', 'assets/images/amenagement-camionnette/9.1.avif', 'assets/images/amenagement-camionnette/9.2.avif', 'assets/images/amenagement-camionnette/9.3.avif', 'assets/images/amenagement-camionnette/9.4.avif', 'assets/images/amenagement-camionnette/9.5.avif'],
+ affutage:['assets/images/magasin/5.avif','assets/images/magasin/6.avif','assets/images/magasin/7.avif']
 };
 document.querySelectorAll('[data-gallery]').forEach(root=>{
  const files=collections[root.dataset.gallery]||[];
