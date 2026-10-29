@@ -349,3 +349,6 @@ body .site-footer{display:block!important}
 
 /* V36 : afficher les lames entières, sans recadrage */
 #affutage .service-slideshow>img{object-fit:contain;background:#fff}
+
+/* Intitulés des cartes Services en vert fluo */
+#accueil #services .feature > span{color:#39ff14}
