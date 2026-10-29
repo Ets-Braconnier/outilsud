@@ -352,3 +352,6 @@ body .site-footer{display:block!important}
 
 /* Intitulés des cartes Services en vert fluo */
 #accueil #services .feature > span{color:#39ff14}
+
+/* V39 : intitulés des rubriques en vert fluo */
+#main .eyebrow,#main .hero-content .eyebrow,#contact .contact-kicker{color:#39ff14}
