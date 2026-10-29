@@ -1,52 +1,322 @@
 [
   {
-    "id": "aerogommeuse",
-    "name": "Aérogommeuse",
-    "category": "Décapage",
-    "description": "Décapage doux de surfaces par projection d’abrasif.",
-    "period": "Journée / semaine",
+    "id": "aspirateur-souffleur",
+    "name": "Aspirateur souffleur",
+    "category": "Nettoyage",
+    "description": "Aspiration et soufflage pour vos travaux de nettoyage.",
+    "period": "Sur demande",
     "price": null,
     "photo": null,
     "available": true
   },
   {
-    "id": "motoculteur",
+    "id": "aiguille-vibrante",
+    "name": "Aiguille vibrante",
+    "category": "Béton et maçonnerie",
+    "description": "Vibration du béton lors de sa mise en œuvre.",
     "period": "Sur demande",
     "price": null,
     "photo": null,
-    "available": true,
-    "name": "Motoculteur",
-    "category": "Travail du sol",
-    "description": "Préparation et ameublissement de la terre avant plantation ou semis."
+    "available": true
+  },
+  {
+    "id": "agrafeuse",
+    "name": "Agrafeuse",
+    "category": "Fixation",
+    "description": "Fixation par agrafes pour vos travaux de pose.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "adaptateur-de-couronne",
+    "name": "Adaptateur de couronne",
+    "category": "Perçage et carottage",
+    "description": "Accessoire pour le montage de couronnes de perçage.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "burineur",
+    "name": "Burineur",
+    "category": "Démolition",
+    "description": "Burinage et dépose de matériaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "batterie",
+    "name": "Batterie",
+    "category": "Batteries et chargeurs",
+    "description": "Batterie pour outillage compatible, à préciser avec notre équipe.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "cloueur",
+    "name": "Cloueur",
+    "category": "Fixation",
+    "description": "Fixation par clous pour vos travaux de montage.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "carotteuse-a-beton",
+    "name": "Carotteuse à béton",
+    "category": "Perçage et carottage",
+    "description": "Carottage dans le béton.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "coupe-carrelage",
+    "name": "Coupe-carrelage",
+    "category": "Découpe",
+    "description": "Découpe de carrelage pour vos travaux de pose.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "canon-a-chaleur",
+    "name": "Canon à chaleur",
+    "category": "Chauffage et séchage",
+    "description": "Chauffage temporaire de vos espaces de travail.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
   },
   {
     "id": "deshumidificateur",
     "name": "Déshumidificateur",
-    "category": "Séchage",
-    "description": "Assèchement de locaux et aide au séchage après travaux.",
-    "period": "Journée / semaine",
+    "category": "Chauffage et séchage",
+    "description": "Déshumidification de locaux et aide au séchage.",
+    "period": "Sur demande",
     "price": null,
     "photo": null,
     "available": true
   },
   {
-    "id": "compresseur",
+    "id": "forets",
+    "name": "Forets",
+    "category": "Perçage et carottage",
+    "description": "Forets pour vos travaux de perçage, selon le matériau.",
     "period": "Sur demande",
     "price": null,
     "photo": null,
-    "available": true,
-    "name": "Compresseur",
-    "category": "Air comprimé",
-    "description": "Alimentation d’outils pneumatiques et travaux à l’air comprimé."
+    "available": true
   },
   {
-    "id": "dameuse",
+    "id": "foreuse-diamant-a-eau",
+    "name": "Foreuse diamant à eau",
+    "category": "Perçage et carottage",
+    "description": "Forage diamant avec apport d’eau.",
     "period": "Sur demande",
     "price": null,
     "photo": null,
-    "available": true,
-    "name": "Dameuse",
-    "category": "Compactage",
-    "description": "Compactage de sols, remblais et couches de fondation."
+    "available": true
+  },
+  {
+    "id": "goulotte-a-gravats",
+    "name": "Goulotte à gravats",
+    "category": "Béton et maçonnerie",
+    "description": "Évacuation des gravats sur chantier.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "laserliner",
+    "name": "Laserliner",
+    "category": "Mesure et protection",
+    "description": "Matériel de mesure et de contrôle pour vos travaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "lunettes-de-chantier",
+    "name": "Lunettes de chantier",
+    "category": "Mesure et protection",
+    "description": "Protection des yeux pour vos travaux de chantier.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "marteau-piqueur",
+    "name": "Marteau-piqueur",
+    "category": "Démolition",
+    "description": "Travaux de démolition et de piquage.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "multi-cutter",
+    "name": "Multi-cutter",
+    "category": "Découpe",
+    "description": "Outil multifonction pour vos travaux de découpe et de finition.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "meuleuse",
+    "name": "Meuleuse",
+    "category": "Découpe",
+    "description": "Meulage et découpe avec un disque adapté.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "perforateur-burineur",
+    "name": "Perforateur-burineur",
+    "category": "Perçage et carottage",
+    "description": "Perforation et burinage pour vos travaux de rénovation.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "perceuse-a-percussion",
+    "name": "Perceuse à percussion",
+    "category": "Perçage et carottage",
+    "description": "Perçage avec percussion selon le support.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "ponceuse-a-parquet",
+    "name": "Ponceuse à parquet",
+    "category": "Ponçage et finition",
+    "description": "Ponçage et rénovation de parquets.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "perceuse-visseuse",
+    "name": "Perceuse-visseuse",
+    "category": "Perçage et carottage",
+    "description": "Perçage et vissage pour vos travaux de montage.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "mortaiseuse",
+    "name": "Mortaiseuse",
+    "category": "Travail du bois",
+    "description": "Réalisation de mortaises dans le bois.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "perceuse",
+    "name": "Perceuse",
+    "category": "Perçage et carottage",
+    "description": "Perçage avec un foret adapté au matériau.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "poste-inverter",
+    "name": "Poste inverter",
+    "category": "Soudage",
+    "description": "Poste à souder pour vos travaux d’assemblage.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "polisseuse-a-beton",
+    "name": "Polisseuse à béton",
+    "category": "Ponçage et finition",
+    "description": "Polissage et finition de surfaces en béton.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "perforateur",
+    "name": "Perforateur",
+    "category": "Perçage et carottage",
+    "description": "Perforation pour vos travaux de chantier.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "chargeur",
+    "name": "Chargeur",
+    "category": "Batteries et chargeurs",
+    "description": "Chargeur pour batteries compatibles, à préciser avec notre équipe.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "raboteuse",
+    "name": "Raboteuse",
+    "category": "Travail du bois",
+    "description": "Rabotage et ajustement de pièces en bois.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "shampouineuse",
+    "name": "Shampouineuse",
+    "category": "Nettoyage",
+    "description": "Nettoyage de revêtements textiles.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "visseuse",
+    "name": "Visseuse",
+    "category": "Fixation",
+    "description": "Vissage pour vos travaux d’assemblage et de fixation.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
   }
 ]
