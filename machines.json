@@ -2,7 +2,6 @@
   {
     "id": "aspirateur-souffleur",
     "name": "Aspirateur souffleur",
-    "category": "Nettoyage",
     "description": "Aspiration et soufflage pour vos travaux de nettoyage.",
     "period": "Sur demande",
     "price": null,
@@ -12,7 +11,6 @@
   {
     "id": "aiguille-vibrante",
     "name": "Aiguille vibrante",
-    "category": "Béton et maçonnerie",
     "description": "Vibration du béton lors de sa mise en œuvre.",
     "period": "Sur demande",
     "price": null,
@@ -22,7 +20,6 @@
   {
     "id": "agrafeuse",
     "name": "Agrafeuse",
-    "category": "Fixation",
     "description": "Fixation par agrafes pour vos travaux de pose.",
     "period": "Sur demande",
     "price": null,
@@ -32,7 +29,6 @@
   {
     "id": "adaptateur-de-couronne",
     "name": "Adaptateur de couronne",
-    "category": "Perçage et carottage",
     "description": "Accessoire pour le montage de couronnes de perçage.",
     "period": "Sur demande",
     "price": null,
@@ -42,7 +38,6 @@
   {
     "id": "burineur",
     "name": "Burineur",
-    "category": "Démolition",
     "description": "Burinage et dépose de matériaux.",
     "period": "Sur demande",
     "price": null,
@@ -52,7 +47,6 @@
   {
     "id": "batterie",
     "name": "Batterie",
-    "category": "Batteries et chargeurs",
     "description": "Batterie pour outillage compatible, à préciser avec notre équipe.",
     "period": "Sur demande",
     "price": null,
@@ -62,7 +56,6 @@
   {
     "id": "cloueur",
     "name": "Cloueur",
-    "category": "Fixation",
     "description": "Fixation par clous pour vos travaux de montage.",
     "period": "Sur demande",
     "price": null,
@@ -72,7 +65,6 @@
   {
     "id": "carotteuse-a-beton",
     "name": "Carotteuse à béton",
-    "category": "Perçage et carottage",
     "description": "Carottage dans le béton.",
     "period": "Sur demande",
     "price": null,
@@ -82,7 +74,6 @@
   {
     "id": "coupe-carrelage",
     "name": "Coupe-carrelage",
-    "category": "Découpe",
     "description": "Découpe de carrelage pour vos travaux de pose.",
     "period": "Sur demande",
     "price": null,
@@ -92,7 +83,6 @@
   {
     "id": "canon-a-chaleur",
     "name": "Canon à chaleur",
-    "category": "Chauffage et séchage",
     "description": "Chauffage temporaire de vos espaces de travail.",
     "period": "Sur demande",
     "price": null,
@@ -102,7 +92,6 @@
   {
     "id": "deshumidificateur",
     "name": "Déshumidificateur",
-    "category": "Chauffage et séchage",
     "description": "Déshumidification de locaux et aide au séchage.",
     "period": "Sur demande",
     "price": null,
@@ -112,7 +101,6 @@
   {
     "id": "forets",
     "name": "Forets",
-    "category": "Perçage et carottage",
     "description": "Forets pour vos travaux de perçage, selon le matériau.",
     "period": "Sur demande",
     "price": null,
@@ -122,7 +110,6 @@
   {
     "id": "foreuse-diamant-a-eau",
     "name": "Foreuse diamant à eau",
-    "category": "Perçage et carottage",
     "description": "Forage diamant avec apport d’eau.",
     "period": "Sur demande",
     "price": null,
@@ -132,7 +119,6 @@
   {
     "id": "goulotte-a-gravats",
     "name": "Goulotte à gravats",
-    "category": "Béton et maçonnerie",
     "description": "Évacuation des gravats sur chantier.",
     "period": "Sur demande",
     "price": null,
@@ -142,7 +128,6 @@
   {
     "id": "laserliner",
     "name": "Laserliner",
-    "category": "Mesure et protection",
     "description": "Matériel de mesure et de contrôle pour vos travaux.",
     "period": "Sur demande",
     "price": null,
@@ -152,7 +137,6 @@
   {
     "id": "lunettes-de-chantier",
     "name": "Lunettes de chantier",
-    "category": "Mesure et protection",
     "description": "Protection des yeux pour vos travaux de chantier.",
     "period": "Sur demande",
     "price": null,
@@ -162,7 +146,6 @@
   {
     "id": "marteau-piqueur",
     "name": "Marteau-piqueur",
-    "category": "Démolition",
     "description": "Travaux de démolition et de piquage.",
     "period": "Sur demande",
     "price": null,
@@ -172,7 +155,6 @@
   {
     "id": "multi-cutter",
     "name": "Multi-cutter",
-    "category": "Découpe",
     "description": "Outil multifonction pour vos travaux de découpe et de finition.",
     "period": "Sur demande",
     "price": null,
@@ -182,7 +164,6 @@
   {
     "id": "meuleuse",
     "name": "Meuleuse",
-    "category": "Découpe",
     "description": "Meulage et découpe avec un disque adapté.",
     "period": "Sur demande",
     "price": null,
@@ -192,7 +173,6 @@
   {
     "id": "perforateur-burineur",
     "name": "Perforateur-burineur",
-    "category": "Perçage et carottage",
     "description": "Perforation et burinage pour vos travaux de rénovation.",
     "period": "Sur demande",
     "price": null,
@@ -202,7 +182,6 @@
   {
     "id": "perceuse-a-percussion",
     "name": "Perceuse à percussion",
-    "category": "Perçage et carottage",
     "description": "Perçage avec percussion selon le support.",
     "period": "Sur demande",
     "price": null,
@@ -212,7 +191,6 @@
   {
     "id": "ponceuse-a-parquet",
     "name": "Ponceuse à parquet",
-    "category": "Ponçage et finition",
     "description": "Ponçage et rénovation de parquets.",
     "period": "Sur demande",
     "price": null,
@@ -222,7 +200,6 @@
   {
     "id": "perceuse-visseuse",
     "name": "Perceuse-visseuse",
-    "category": "Perçage et carottage",
     "description": "Perçage et vissage pour vos travaux de montage.",
     "period": "Sur demande",
     "price": null,
@@ -232,7 +209,6 @@
   {
     "id": "mortaiseuse",
     "name": "Mortaiseuse",
-    "category": "Travail du bois",
     "description": "Réalisation de mortaises dans le bois.",
     "period": "Sur demande",
     "price": null,
@@ -242,7 +218,6 @@
   {
     "id": "perceuse",
     "name": "Perceuse",
-    "category": "Perçage et carottage",
     "description": "Perçage avec un foret adapté au matériau.",
     "period": "Sur demande",
     "price": null,
@@ -252,7 +227,6 @@
   {
     "id": "poste-inverter",
     "name": "Poste inverter",
-    "category": "Soudage",
     "description": "Poste à souder pour vos travaux d’assemblage.",
     "period": "Sur demande",
     "price": null,
@@ -262,7 +236,6 @@
   {
     "id": "polisseuse-a-beton",
     "name": "Polisseuse à béton",
-    "category": "Ponçage et finition",
     "description": "Polissage et finition de surfaces en béton.",
     "period": "Sur demande",
     "price": null,
@@ -272,7 +245,6 @@
   {
     "id": "perforateur",
     "name": "Perforateur",
-    "category": "Perçage et carottage",
     "description": "Perforation pour vos travaux de chantier.",
     "period": "Sur demande",
     "price": null,
@@ -282,7 +254,6 @@
   {
     "id": "chargeur",
     "name": "Chargeur",
-    "category": "Batteries et chargeurs",
     "description": "Chargeur pour batteries compatibles, à préciser avec notre équipe.",
     "period": "Sur demande",
     "price": null,
@@ -292,7 +263,6 @@
   {
     "id": "raboteuse",
     "name": "Raboteuse",
-    "category": "Travail du bois",
     "description": "Rabotage et ajustement de pièces en bois.",
     "period": "Sur demande",
     "price": null,
@@ -302,7 +272,6 @@
   {
     "id": "shampouineuse",
     "name": "Shampouineuse",
-    "category": "Nettoyage",
     "description": "Nettoyage de revêtements textiles.",
     "period": "Sur demande",
     "price": null,
@@ -312,7 +281,6 @@
   {
     "id": "visseuse",
     "name": "Visseuse",
-    "category": "Fixation",
     "description": "Vissage pour vos travaux d’assemblage et de fixation.",
     "period": "Sur demande",
     "price": null,
