@@ -42,3 +42,11 @@
 </style>
 
 <style>#actualites{scroll-margin-top:var(--header-offset,98px)}</style>
+
+<style>
+/* V48 : davantage de largeur pour le module Facebook */
+#accueil .facebook-news-panel{grid-template-columns:minmax(240px,1fr) minmax(0,700px);gap:28px}
+#accueil .facebook-news-feed{width:100%;max-width:700px;height:450px}
+#accueil .facebook-news-feed iframe{width:100%;max-width:none;height:450px;transform:none}
+@media(max-width:1000px){#accueil .facebook-news-panel{grid-template-columns:1fr}#accueil .facebook-news-copy{max-width:none}}
+</style>
