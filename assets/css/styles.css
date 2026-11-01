@@ -355,3 +355,6 @@ body .site-footer{display:block!important}
 
 /* V39 : intitulés des rubriques en vert fluo */
 #main .eyebrow,#main .hero-content .eyebrow,#contact .contact-kicker{color:#39ff14}
+
+/* Photos du catalogue location */
+#location .machine-art{background:#fff}#location .machine-art img{object-fit:contain;padding:10px}

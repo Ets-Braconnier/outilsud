@@ -1,5 +1,5 @@
 /** One adaptive contact form, shared by all services. */
-import {$,escapeHtml,getSelection,saveSelection,prepareEmail,showToast} from './common.js?v=34';
+import {$,escapeHtml,getSelection,saveSelection,prepareEmail,showToast} from './common.js?v=43';
 const form=$('contactForm');
 let machines=[];
 const config={
@@ -50,5 +50,5 @@ form.addEventListener('submit',e=>{
  if(d.equipment)lines.push(`Matériel : ${d.equipment}`);if(d.reference)lines.push(`Marque / référence : ${d.reference}`);
  lines.push('',d.message||'','', 'Cordialement');prepareEmail(`${config[d.service][0]} — Outilsud`,lines.join('\n'));
 });
-fetch('machines.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{machines=data;renderSelection();}).catch(()=>showToast('Impossible de charger les machines sélectionnées.'));
+fetch('machines.json?v=43').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{machines=data;renderSelection();}).catch(()=>showToast('Impossible de charger les machines sélectionnées.'));
 adapt('general');

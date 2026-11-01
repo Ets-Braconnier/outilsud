@@ -1,6 +1,6 @@
 /** Store gallery: exact filenames generated from the uploaded image folder. */
-import {$} from './common.js?v=34';
-import {photos} from './photos.js?v=34';
+import {$} from './common.js?v=43';
+import {photos} from './photos.js?v=43';
 const image = $('shopSlide');
 const counter = $('shopCounter');
 let index = 0;

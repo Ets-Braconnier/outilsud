@@ -5,7 +5,7 @@
     "description": "Aspiration et soufflage pour vos travaux de nettoyage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/aspirateur-souffleur.webp",
     "available": true
   },
   {
@@ -14,7 +14,7 @@
     "description": "Vibration du béton lors de sa mise en œuvre.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/aiguille-vibrante.jpg",
     "available": true
   },
   {
@@ -23,7 +23,7 @@
     "description": "Fixation par agrafes pour vos travaux de pose.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/afrafeuse.jpg",
     "available": true
   },
   {
@@ -32,7 +32,7 @@
     "description": "Accessoire pour le montage de couronnes de perçage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/adaptateur-couronne.jpg",
     "available": true
   },
   {
@@ -41,16 +41,7 @@
     "description": "Burinage et dépose de matériaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "batterie",
-    "name": "Batterie",
-    "description": "Batterie pour outillage compatible, à préciser avec notre équipe.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/burineur.jpg",
     "available": true
   },
   {
@@ -59,7 +50,7 @@
     "description": "Fixation par clous pour vos travaux de montage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/cloueur.jpg",
     "available": true
   },
   {
@@ -68,7 +59,7 @@
     "description": "Carottage dans le béton.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/carotteuse-a-beton.jpg",
     "available": true
   },
   {
@@ -77,7 +68,7 @@
     "description": "Découpe de carrelage pour vos travaux de pose.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/coupe-carrelage.png",
     "available": true
   },
   {
@@ -86,7 +77,7 @@
     "description": "Chauffage temporaire de vos espaces de travail.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/canon-soleil.jpg",
     "available": true
   },
   {
@@ -95,7 +86,7 @@
     "description": "Déshumidification de locaux et aide au séchage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/deshumidificateur.jpg",
     "available": true
   },
   {
@@ -104,7 +95,7 @@
     "description": "Forets pour vos travaux de perçage, selon le matériau.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/foret.jpg",
     "available": true
   },
   {
@@ -113,7 +104,7 @@
     "description": "Forage diamant avec apport d’eau.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/foreuse-diamant-a-eau.webp",
     "available": true
   },
   {
@@ -122,7 +113,7 @@
     "description": "Évacuation des gravats sur chantier.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/goulotte-a-gravats-avec-chaines.jpg",
     "available": true
   },
   {
@@ -131,7 +122,7 @@
     "description": "Matériel de mesure et de contrôle pour vos travaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/laserliner-combiran-gextender.webp",
     "available": true
   },
   {
@@ -140,7 +131,7 @@
     "description": "Protection des yeux pour vos travaux de chantier.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/lunette-chantier.webp",
     "available": true
   },
   {
@@ -149,7 +140,7 @@
     "description": "Travaux de démolition et de piquage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/marteau-piqueur.jpg",
     "available": true
   },
   {
@@ -158,7 +149,7 @@
     "description": "Outil multifonction pour vos travaux de découpe et de finition.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/multi-cutter.jpg",
     "available": true
   },
   {
@@ -167,25 +158,7 @@
     "description": "Meulage et découpe avec un disque adapté.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "perforateur-burineur",
-    "name": "Perforateur-burineur",
-    "description": "Perforation et burinage pour vos travaux de rénovation.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "perceuse-a-percussion",
-    "name": "Perceuse à percussion",
-    "description": "Perçage avec percussion selon le support.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/meuleuse.jpg",
     "available": true
   },
   {
@@ -194,7 +167,7 @@
     "description": "Ponçage et rénovation de parquets.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/ponceuse-parquet.jpg",
     "available": true
   },
   {
@@ -203,7 +176,7 @@
     "description": "Perçage et vissage pour vos travaux de montage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/perceuse-visseuse.jpg",
     "available": true
   },
   {
@@ -212,16 +185,7 @@
     "description": "Réalisation de mortaises dans le bois.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "perceuse",
-    "name": "Perceuse",
-    "description": "Perçage avec un foret adapté au matériau.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/mortaiseuse.webp",
     "available": true
   },
   {
@@ -230,7 +194,7 @@
     "description": "Poste à souder pour vos travaux d’assemblage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/poste-inverter.webp",
     "available": true
   },
   {
@@ -239,7 +203,7 @@
     "description": "Polissage et finition de surfaces en béton.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/polisseuse-beton.jpg",
     "available": true
   },
   {
@@ -248,16 +212,7 @@
     "description": "Perforation pour vos travaux de chantier.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "chargeur",
-    "name": "Chargeur",
-    "description": "Chargeur pour batteries compatibles, à préciser avec notre équipe.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/perforateur.jpg",
     "available": true
   },
   {
@@ -266,7 +221,7 @@
     "description": "Rabotage et ajustement de pièces en bois.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/raboteuse.gif",
     "available": true
   },
   {
@@ -275,16 +230,34 @@
     "description": "Nettoyage de revêtements textiles.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/shampouineuse.webp",
     "available": true
   },
   {
-    "id": "visseuse",
-    "name": "Visseuse",
-    "description": "Vissage pour vos travaux d’assemblage et de fixation.",
+    "id": "cloueur-gaz",
+    "name": "Cloueur à gaz",
+    "description": "Cloueur disponible à la location. Contactez notre équipe pour les caractéristiques.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/cloueur-gaz.jpg",
+    "available": true
+  },
+  {
+    "id": "cloueur-pneumatique",
+    "name": "Cloueur pneumatique",
+    "description": "Cloueur disponible à la location. Contactez notre équipe pour les caractéristiques.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": "assets/images/photos-locations/cloueur-pneumatique.png",
+    "available": true
+  },
+  {
+    "id": "cloueur-vertigel",
+    "name": "Cloueur (modèle Vertigel)",
+    "description": "Cloueur disponible à la location. Contactez notre équipe pour les caractéristiques.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": "assets/images/photos-locations/cloueur-vertigel.jpg",
     "available": true
   }
 ]

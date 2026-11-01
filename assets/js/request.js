@@ -1,5 +1,5 @@
 /** Quote request page: persistent selected machines and email draft. */
-import {$, escapeHtml, getSelection, saveSelection, prepareEmail, showToast} from './common.js?v=34';
+import {$, escapeHtml, getSelection, saveSelection, prepareEmail, showToast} from './common.js?v=43';
 let machines = [];
 const selected = getSelection();
 function render() {
@@ -24,4 +24,4 @@ const today = new Date();
 const localToday = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
 $('requestForm').elements.start.min = localToday;
 $('requestForm').elements.end.min = localToday;
-fetch('machines.json').then(r => {if(!r.ok)throw new Error('Catalogue indisponible');return r.json()}).then(data=>{machines=data;render()}).catch(()=>showToast('Impossible de charger le catalogue.'));
+fetch('machines.json?v=43').then(r => {if(!r.ok)throw new Error('Catalogue indisponible');return r.json()}).then(data=>{machines=data;render()}).catch(()=>showToast('Impossible de charger le catalogue.'));
