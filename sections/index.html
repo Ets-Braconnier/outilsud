@@ -11,7 +11,7 @@
     <a class="btn btn-primary" href="https://www.facebook.com/Outilsud/" target="_blank" rel="noopener noreferrer">Voir notre page Facebook ↗</a>
    </div>
    <div class="facebook-news-feed">
-    <iframe title="Publications de la page Facebook Outilsud" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOutilsud%2F&amp;tabs=timeline&amp;width=500&amp;height=450&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false" width="500" height="450" loading="lazy" style="border:0;overflow:hidden" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe title="Publications de la page Facebook Outilsud" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOutilsud%2F&amp;tabs=timeline&amp;width=500&amp;height=450&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=false" width="500" height="450" loading="lazy" style="border:0;overflow:hidden" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
    </div>
   </div>
  </div>
@@ -45,16 +45,16 @@
 
 <style>
 /* V48 : davantage de largeur pour le module Facebook */
-#accueil .facebook-news-panel{grid-template-columns:minmax(240px,1fr) minmax(0,700px);gap:28px}
-#accueil .facebook-news-feed{width:100%;max-width:700px;height:450px}
+#accueil .facebook-news-panel{grid-template-columns:minmax(240px,1fr) minmax(0,600px);gap:28px}
+#accueil .facebook-news-feed{width:100%;max-width:600px;height:450px}
 #accueil .facebook-news-feed iframe{width:100%;max-width:none;height:450px;transform:none}
 @media(max-width:1000px){#accueil .facebook-news-panel{grid-template-columns:1fr}#accueil .facebook-news-copy{max-width:none}}
 </style>
 
 <style>
-/* V49 : agrandir le module lui-même, pas seulement son conteneur */
-#accueil .facebook-news-feed{width:700px;max-width:100%;height:450px;overflow:hidden}
-#accueil .facebook-news-feed iframe{display:block;width:500px;max-width:none;height:450px;transform:scale(1.4);transform-origin:top left}
+/* V50 : module Facebook de 600 px */
+#accueil .facebook-news-feed{width:600px;max-width:100%;height:450px;overflow:hidden}
+#accueil .facebook-news-feed iframe{display:block;width:500px;max-width:none;height:450px;transform:scale(1.2);transform-origin:top left}
 @media(max-width:1100px) and (min-width:1001px){#accueil .facebook-news-panel{grid-template-columns:1fr}}
 @media(max-width:760px){#accueil .facebook-news-feed{width:500px}#accueil .facebook-news-feed iframe{transform:none;width:100%}}
 </style>
