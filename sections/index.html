@@ -12,7 +12,7 @@
     <p class="facebook-news-note">Si les publications ne s’affichent pas, vous pouvez les consulter directement sur Facebook.</p>
    </div>
    <div class="facebook-news-feed">
-    <iframe title="Publications de la page Facebook Outilsud" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOutilsud%2F&amp;tabs=timeline&amp;width=500&amp;height=800&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false" width="500" height="800" loading="lazy" style="border:0;overflow:hidden" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe title="Publications de la page Facebook Outilsud" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOutilsud%2F&amp;tabs=timeline&amp;width=500&amp;height=450&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false" width="500" height="450" loading="lazy" style="border:0;overflow:hidden" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
    </div>
   </div>
  </div>
@@ -32,12 +32,12 @@
 @media(max-width:480px){#accueil .facebook-news-panel{padding:14px}#accueil .facebook-news-copy .btn{width:100%;font-size:.9rem}}
 </style>
 
+
 <style>
-/* V45 : fil Facebook réduit à 80 %, avec davantage de contenu visible */
-#accueil .facebook-news-panel{grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:32px;padding:24px}
-#accueil .facebook-news-feed{width:400px;max-width:100%;height:640px;position:relative}
-#accueil .facebook-news-feed iframe{width:500px;max-width:none;height:800px;transform:scale(.8);transform-origin:top left}
+/* V46 : encadré Facebook plus large et moins haut */
+#accueil .facebook-news-panel{grid-template-columns:minmax(0,1fr) minmax(0,500px);gap:32px;padding:24px}
+#accueil .facebook-news-feed{width:100%;max-width:500px;height:450px}
+#accueil .facebook-news-feed iframe{display:block;width:100%;max-width:500px;height:450px;transform:none}
 @media(max-width:850px){#accueil .facebook-news-panel{grid-template-columns:1fr}}
-@media(max-width:480px){#accueil .facebook-news-feed{width:300px;height:480px}#accueil .facebook-news-feed iframe{transform:scale(.6)}}
-@media(max-width:360px){#accueil .facebook-news-feed{width:250px;height:400px}#accueil .facebook-news-feed iframe{transform:scale(.5)}}
+@media(max-width:480px){#accueil .facebook-news-panel{padding:14px}}
 </style>
