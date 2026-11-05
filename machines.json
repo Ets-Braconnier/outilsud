@@ -262,12 +262,46 @@
   },
   {
     "id": "aspirateur-classique-25-l-90-l-etc",
-    "name": "Aspirateur classique (25 L, 90 L, etc.)",
-    "description": "Aspiration des poussières et déchets de chantier.",
+    "name": "Aspirateur classique",
+    "description": "Plusieurs modèles et capacités disponibles. Cliquez pour voir les aspirateurs.",
     "period": "Sur demande",
     "price": null,
     "photo": null,
-    "available": true
+    "available": true,
+    "models": [
+      {
+        "name": "Festool CTL 26 E — 26 L",
+        "photo": null
+      },
+      {
+        "name": "Hikoki RP250 YDM — 20 L",
+        "photo": null
+      },
+      {
+        "name": "Makita DCV261 — aspirateur dorsal, 2 L, sur batterie",
+        "photo": null
+      },
+      {
+        "name": "Metabo ASR 35 ACP — 35 L",
+        "photo": null
+      },
+      {
+        "name": "DeWalt DCV584 — 7,5 L, sur batterie",
+        "photo": null
+      },
+      {
+        "name": "DeWalt DCV582 — 7,5 L, sur batterie",
+        "photo": null
+      },
+      {
+        "name": "Aspirateur 90 L",
+        "photo": null
+      },
+      {
+        "name": "Aspirateur 25 L",
+        "photo": null
+      }
+    ]
   },
   {
     "id": "autolaveuse",

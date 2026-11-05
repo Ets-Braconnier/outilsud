@@ -6,7 +6,7 @@ let page = 0;
 const selection = getSelection();
 function card(machine) {
   const selected = selection.has(machine.id);
-  return `<article class="machine-card"><div class="machine-art">${machine.photo ? `<img src="${escapeHtml(machine.photo)}" alt="${escapeHtml(machine.name)}" loading="lazy">` : machineIcon}</div><div class="machine-content"><h2>${escapeHtml(machine.name)}</h2><p>${escapeHtml(machine.description)}</p><div class="machine-meta">◷ ${escapeHtml(machine.period || 'Sur demande')} · Prix sur demande</div><button class="machine-button ${selected ? 'active' : ''}" type="button" data-machine="${escapeHtml(machine.id)}" aria-pressed="${selected}">${selected ? '✓ Ajoutée au devis' : 'Demander un devis de location'}</button></div></article>`;
+  return `<article class="machine-card"><div class="machine-art">${machine.photo ? `<img src="${escapeHtml(machine.photo)}" alt="${escapeHtml(machine.name)}" loading="lazy">` : machineIcon}</div><div class="machine-content"><h2>${escapeHtml(machine.name)}</h2><p>${escapeHtml(machine.description)}</p><div class="machine-meta">◷ ${escapeHtml(machine.period || 'Sur demande')} · Prix sur demande</div>${machine.models?.length ? `<button class="machine-button" type="button" data-models="${escapeHtml(machine.id)}">Voir les ${machine.models.length} aspirateurs</button>` : `<button class="machine-button ${selected ? 'active' : ''}" type="button" data-machine="${escapeHtml(machine.id)}" aria-pressed="${selected}">${selected ? '✓ Ajoutée au devis' : 'Demander un devis de location'}</button>`}</div></article>`;
 }
 function render() {
   const query = $('search').value.trim().toLocaleLowerCase('fr');
@@ -35,6 +35,8 @@ async function init() {
   }
 }
 $('catalog').addEventListener('click', (event) => {
+  const modelsButton = event.target.closest('[data-models]');
+  if (modelsButton) { openModels(modelsButton.dataset.models); return; }
   const button = event.target.closest('[data-machine]'); if (!button) return;
   const id = button.dataset.machine;
   if (selection.has(id)) selection.delete(id); else selection.add(id);
@@ -47,3 +49,28 @@ $('catalogNext').addEventListener('click', () => { page += 1; render(); });
 window.addEventListener('resize', render);
 window.addEventListener('selection-change',()=>{selection.clear();getSelection().forEach(id=>selection.add(id));render();});
 init();
+
+// Fiche détaillée : un seul catalogue, plusieurs modèles à choisir.
+const modelDialog = document.getElementById('locationModelsDialog');
+function openModels(id) {
+  const machine = machines.find(m => m.id === id);
+  if (!machine?.models?.length || !modelDialog) return;
+  document.getElementById('locationModelsTitle').textContent = machine.name;
+  document.getElementById('locationModelsList').innerHTML = machine.models.map((model, i) => {
+    const selected = selection.has(id);
+    return `<article class="location-model"><div class="location-model-art">${model.photo ? `<img src="${escapeHtml(model.photo)}" alt="${escapeHtml(model.name)}" loading="lazy">` : machineIcon}</div><div class="location-model-body"><h3>${escapeHtml(model.name)}</h3><p>Disponibilité et tarif sur demande.</p><button type="button" class="machine-button ${selected ? 'active' : ''}" data-model-select="${i}" aria-pressed="${selected}">${selected ? '✓ Ajouté au devis' : 'Ajouter au devis'}</button></div></article>`;
+  }).join('');
+  modelDialog.showModal();
+}
+modelDialog?.addEventListener('click', event => {
+  if (event.target === modelDialog) modelDialog.close();
+  const button = event.target.closest('[data-model-select]');
+  if (!button) return;
+  const index = Number(button.dataset.modelSelect);
+  const id = 'aspirateur-classique-25-l-90-l-etc';
+  const key = id;
+  if (selection.has(key)) selection.delete(key); else selection.add(key);
+  saveSelection(selection);
+  openModels(id);
+  window.dispatchEvent(new CustomEvent('contact-service', {detail:'location'}));
+});
