@@ -10,7 +10,7 @@ async function init(){
   return r.text();
  }));
  names.forEach((n,i)=>{document.getElementById(idFor(n)).innerHTML=fragments[i]});
- await Promise.all([import('./location.js?v=46'),import('./gallery.js?v=46'),import('./contact.js?v=46')]);
+ await Promise.all([import('./location.js?v=47'),import('./gallery.js?v=46'),import('./contact.js?v=47')]);
  await import('./service-gallery.js?v=46');
  // Carrousel Services : 4 cartes visibles sur grand écran, une rangée uniquement.
  const track=document.getElementById('services-carousel-track');

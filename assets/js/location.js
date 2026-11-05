@@ -4,9 +4,10 @@ const machineIcon = `<svg viewBox="0 0 160 120" aria-hidden="true"><g fill="none
 let machines = [];
 let page = 0;
 const selection = getSelection();
+if (selection.delete("aspirateur-classique-25-l-90-l-etc") || selection.delete("aspirateur")) saveSelection(selection);
 function card(machine) {
   const selected = selection.has(machine.id);
-  return `<article class="machine-card"><div class="machine-art">${machine.photo ? `<img src="${escapeHtml(machine.photo)}" alt="${escapeHtml(machine.name)}" loading="lazy">` : machineIcon}</div><div class="machine-content"><h2>${escapeHtml(machine.name)}</h2><p>${escapeHtml(machine.description)}</p><div class="machine-meta">◷ ${escapeHtml(machine.period || 'Sur demande')} · Prix sur demande</div>${machine.models?.length ? `<button class="machine-button" type="button" data-models="${escapeHtml(machine.id)}">Voir les ${machine.models.length} aspirateurs</button>` : `<button class="machine-button ${selected ? 'active' : ''}" type="button" data-machine="${escapeHtml(machine.id)}" aria-pressed="${selected}">${selected ? '✓ Ajoutée au devis' : 'Demander un devis de location'}</button>`}</div></article>`;
+  return `<article class="machine-card"><div class="machine-art">${machine.photo ? `<img src="${escapeHtml(machine.photo)}" alt="${escapeHtml(machine.name)}" loading="lazy">` : machineIcon}</div><div class="machine-content"><h2>${escapeHtml(machine.name)}</h2><p>${escapeHtml(machine.description)}</p><div class="machine-meta">◷ ${escapeHtml(machine.period || 'Sur demande')} · Prix sur demande</div>${machine.models?.length ? `<button class="machine-button" type="button" data-models="${escapeHtml(machine.id)}">Voir les aspirateurs</button>` : `<button class="machine-button ${selected ? 'active' : ''}" type="button" data-machine="${escapeHtml(machine.id)}" aria-pressed="${selected}">${selected ? '✓ Ajoutée au devis' : 'Demander un devis de location'}</button>`}</div></article>`;
 }
 function render() {
   const query = $('search').value.trim().toLocaleLowerCase('fr');
@@ -55,20 +56,21 @@ const modelDialog = document.getElementById('locationModelsDialog');
 function openModels(id) {
   const machine = machines.find(m => m.id === id);
   if (!machine?.models?.length || !modelDialog) return;
+  modelDialog.dataset.machineId = id;
   document.getElementById('locationModelsTitle').textContent = machine.name;
   document.getElementById('locationModelsList').innerHTML = machine.models.map((model, i) => {
-    const selected = selection.has(id);
-    return `<article class="location-model"><div class="location-model-art">${model.photo ? `<img src="${escapeHtml(model.photo)}" alt="${escapeHtml(model.name)}" loading="lazy">` : machineIcon}</div><div class="location-model-body"><h3>${escapeHtml(model.name)}</h3><p>Disponibilité et tarif sur demande.</p><button type="button" class="machine-button ${selected ? 'active' : ''}" data-model-select="${i}" aria-pressed="${selected}">${selected ? '✓ Ajouté au devis' : 'Ajouter au devis'}</button></div></article>`;
+    const selected = selection.has(`${id}-modele-${i}`);
+    return `<article class="location-model"><div class="location-model-art">${model.photo ? `<img src="${escapeHtml(model.photo)}" alt="${escapeHtml(model.name)}" loading="lazy">` : machineIcon}</div><div class="location-model-body"><h3>${escapeHtml(model.name)}</h3><p>Disponibilité et tarif sur demande.</p><button type="button" class="machine-button ${selected ? 'active' : ''}" data-model-select="${i}" aria-pressed="${selected}">${selected ? '✓ Sélectionné' : 'Demander un devis'}</button></div></article>`;
   }).join('');
-  modelDialog.showModal();
+  if (!modelDialog.open) modelDialog.showModal();
 }
 modelDialog?.addEventListener('click', event => {
   if (event.target === modelDialog) modelDialog.close();
   const button = event.target.closest('[data-model-select]');
   if (!button) return;
   const index = Number(button.dataset.modelSelect);
-  const id = 'aspirateur-classique-25-l-90-l-etc';
-  const key = id;
+  const id = modelDialog.dataset.machineId;
+  const key = `${id}-modele-${index}`;
   if (selection.has(key)) selection.delete(key); else selection.add(key);
   saveSelection(selection);
   openModels(id);
