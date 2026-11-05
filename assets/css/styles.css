@@ -361,3 +361,12 @@ body .site-footer{display:block!important}
 
 /* Détail des modèles de location */
 .location-model-dialog{border:0;border-radius:16px;padding:24px;max-width:min(900px,94vw);max-height:88vh;overflow:auto;width:100%;box-shadow:0 20px 70px #0005;color:inherit;background:#fff}.location-model-dialog::backdrop{background:#1119}.location-model-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.location-model-header h2{margin:4px 0 12px}.location-model-close{font-size:30px;line-height:1;background:transparent;border:0;cursor:pointer}.location-model-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:20px}.location-model{border:1px solid #ddd;border-radius:12px;overflow:hidden}.location-model-art{height:130px;display:grid;place-items:center;background:#f4f5f8}.location-model-art svg{width:110px;height:90px}.location-model-art img{width:100%;height:100%;object-fit:contain}.location-model-body{padding:14px}.location-model-body h3{font-size:1rem;margin:0 0 10px}.location-model-body p{font-size:.9rem}.location-model-body .machine-button{width:100%}.location-model-note{font-size:.85rem;margin-top:18px}
+
+/* V48 : photos de location strictement contenues dans leur zone, sans chevauchement */
+#location .machine-art {height:150px;min-height:150px;max-height:150px;overflow:hidden;flex:0 0 150px;isolation:isolate;}
+#location .machine-art img {display:block;position:static;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center;box-sizing:border-box;padding:10px;}
+.location-model {display:flex;flex-direction:column;min-width:0;overflow:hidden;}
+.location-model-art {height:160px;min-height:160px;max-height:160px;flex:0 0 160px;overflow:hidden;position:relative;isolation:isolate;}
+.location-model-art img {display:block;position:static;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center;box-sizing:border-box;padding:10px;}
+.location-model-body {display:flex;flex-direction:column;flex:1;min-width:0;background:#fff;position:relative;z-index:1;}
+.location-model-body .machine-button {margin-top:auto;}

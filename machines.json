@@ -262,23 +262,23 @@
     "models": [
       {
         "name": "Festool CTL 26 E — 26 L",
-        "photo": null
+        "photo": "assets/images/photos-locations/aspirateurs/FESTOOL-CTL-26 EI.avif"
       },
       {
         "name": "Hikoki RP250 YDM — 20 L",
-        "photo": null
+        "photo": "assets/images/photos-locations/aspirateurs/HiKOKI-RP250YDM.avif"
       },
       {
         "name": "Makita DCV261 — aspirateur dorsal, 2 L, sur batterie",
-        "photo": null
+        "photo": "assets/images/photos-locations/aspirateurs/Makita-DVC261.avif"
       },
       {
         "name": "Metabo ASR 35 ACP — 35 L",
-        "photo": null
+        "photo": "assets/images/photos-locations/aspirateurs/Metabo-ASR 35-ACP.avif"
       },
       {
         "name": "DeWalt DCV584 — 7,5 L, sur batterie",
-        "photo": null
+        "photo": "assets/images/photos-locations/aspirateurs/DEWALT-DCV584L.avif"
       },
       {
         "name": "DeWalt DCV582 — 7,5 L, sur batterie",
@@ -286,15 +286,15 @@
       },
       {
         "name": "Aspirateur 90 L",
-        "photo": null
+        "photo": "assets/images/photos-locations/aspirateurs/aspirateur-90lm.avif"
       },
       {
         "name": "Aspirateur 25 L",
-        "photo": null
+        "photo": "assets/images/photos-locations/aspirateurs/aspirateur-25l.avif"
       },
       {
         "name": "Aspirateur souffleur",
-        "photo": "assets/images/photos-locations/aspirateur-souffleur.avif"
+        "photo": "assets/images/photos-locations/aspirateurs/aspirateur-souffleur.avif"
       }
     ]
   },
