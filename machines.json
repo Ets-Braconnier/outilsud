@@ -259,5 +259,329 @@
     "price": null,
     "photo": "assets/images/photos-locations/cloueur-vertigel.avif",
     "available": true
+  },
+  {
+    "id": "aspirateur-classique-25-l-90-l-etc",
+    "name": "Aspirateur classique (25 L, 90 L, etc.)",
+    "description": "Aspiration des poussières et déchets de chantier.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "autolaveuse",
+    "name": "Autolaveuse",
+    "description": "Nettoyage mécanisé des sols.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "bati-de-forage-pied-de-carotteuse",
+    "name": "Bâti de forage / pied de carotteuse",
+    "description": "Support de guidage pour les travaux de carottage.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "boulonneuse",
+    "name": "Boulonneuse",
+    "description": "Serrage et desserrage de boulons.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "compresseur",
+    "name": "Compresseur",
+    "description": "Alimentation en air comprimé pour vos travaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "debroussailleuse",
+    "name": "Débroussailleuse",
+    "description": "Entretien des herbes hautes et broussailles.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "defonceuse",
+    "name": "Défonceuse",
+    "description": "Usinage et fraisage du bois.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "dejointoyeur-pneumatique",
+    "name": "Déjointoyeur pneumatique",
+    "description": "Retrait des joints de maçonnerie.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "echafaudage",
+    "name": "Échafaudage",
+    "description": "Accès en hauteur pour vos travaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "etancons",
+    "name": "Étançons",
+    "description": "Soutien provisoire des éléments de construction.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "foreuse-magnetique",
+    "name": "Foreuse magnétique",
+    "description": "Perçage magnétique de pièces métalliques.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "grignoteuse",
+    "name": "Grignoteuse",
+    "description": "Découpe de tôles et éléments métalliques.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "groupe-electrogene",
+    "name": "Groupe électrogène",
+    "description": "Alimentation électrique autonome sur chantier.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "leve-plaque-leve-panneau",
+    "name": "Lève-plaque / lève-panneau",
+    "description": "Levage et mise en place de plaques et panneaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "motoculteur",
+    "name": "Motoculteur",
+    "description": "Préparation et travail de la terre.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "nettoyeur-haute-pression",
+    "name": "Nettoyeur haute pression",
+    "description": "Nettoyage à l’eau sous haute pression.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "plaque-vibrante",
+    "name": "Plaque vibrante",
+    "description": "Compactage des sols et matériaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "pompe-a-vide",
+    "name": "Pompe à vide",
+    "description": "Mise sous vide pour les travaux adaptés.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "pompe-submersible",
+    "name": "Pompe submersible",
+    "description": "Pompage et évacuation d’eau.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "ponceuse-excentrique-girafe-etc",
+    "name": "Ponceuse (excentrique, girafe, etc.)",
+    "description": "Ponçage des surfaces avec l’outil adapté.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "pulverisateur",
+    "name": "Pulvérisateur",
+    "description": "Pulvérisation de produits adaptés.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "sableuse",
+    "name": "Sableuse",
+    "description": "Décapage de surfaces par projection abrasive.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "rainureuse",
+    "name": "Rainureuse",
+    "description": "Réalisation de rainures dans les matériaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "scie-a-onglets-scie-a-table",
+    "name": "Scie à onglets / scie à table",
+    "description": "Découpe de précision et coupes d’angle.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "scie-a-sol",
+    "name": "Scie à sol",
+    "description": "Découpe de sols et revêtements.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "scie-plongeante",
+    "name": "Scie plongeante",
+    "description": "Découpe guidée de panneaux et matériaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "scie-sabre",
+    "name": "Scie sabre",
+    "description": "Découpe de matériaux avec une lame alternative.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "scie-sauteuse",
+    "name": "Scie sauteuse",
+    "description": "Découpes droites et courbes.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "sertisseuse",
+    "name": "Sertisseuse",
+    "description": "Sertissage de raccords adaptés.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "taille-haie",
+    "name": "Taille-haie",
+    "description": "Taille et entretien des haies.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "tariere-thermique",
+    "name": "Tarière thermique",
+    "description": "Forage de trous dans la terre.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "tondeuse-autotractee",
+    "name": "Tondeuse autotractée",
+    "description": "Tonte et entretien des pelouses.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "transpalette",
+    "name": "Transpalette",
+    "description": "Déplacement de charges sur palettes.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "tronconneuse-a-bois",
+    "name": "Tronçonneuse à bois",
+    "description": "Coupe et débit de bois.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "tronconneuse-disqueuse",
+    "name": "Tronçonneuse-disqueuse",
+    "description": "Découpe de matériaux avec disque adapté.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
+  },
+  {
+    "id": "ventouse-de-levage-grabo",
+    "name": "Ventouse de levage GRABO",
+    "description": "Levage et manutention par ventouse.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": null,
+    "available": true
   }
 ]
