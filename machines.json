@@ -1,14 +1,5 @@
 [
   {
-    "id": "aspirateur-souffleur",
-    "name": "Aspirateur souffleur",
-    "description": "Aspiration et soufflage pour vos travaux de nettoyage.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": "assets/images/photos-locations/aspirateur-souffleur.avif",
-    "available": true
-  },
-  {
     "id": "aiguille-vibrante",
     "name": "Aiguille vibrante",
     "description": "Vibration du béton lors de sa mise en œuvre.",
@@ -261,9 +252,9 @@
     "available": true
   },
   {
-    "id": "aspirateur-classique-25-l-90-l-etc",
+    "id": "aspirateur",
     "name": "Aspirateur",
-    "description": "8 aspirateurs disponibles. Cliquez pour découvrir les modèles.",
+    "description": "Découvrez les aspirateurs disponibles à la location.",
     "period": "Sur demande",
     "price": null,
     "photo": null,
@@ -300,6 +291,10 @@
       {
         "name": "Aspirateur 25 L",
         "photo": null
+      },
+      {
+        "name": "Aspirateur souffleur",
+        "photo": "assets/images/photos-locations/aspirateur-souffleur.avif"
       }
     ]
   },

@@ -14,7 +14,7 @@ const config={
 };
 function renderSelection(){
  const selected=getSelection();
- const items=machines.filter(m=>selected.has(m.id));
+ const items=machines.flatMap(m=>[...(selected.has(m.id)?[{id:m.id,name:m.name}]:[]),...(m.models||[]).flatMap((model,i)=>selected.has(`${m.id}-modele-${i}`)?[{id:`${m.id}-modele-${i}`,name:`${m.name} — ${model.name}`}]:[])]);
  $('selection').innerHTML=items.length?items.map(m=>`<div class="selected-item"><span>✓ ${escapeHtml(m.name)}</span><button type="button" data-remove="${escapeHtml(m.id)}" aria-label="Retirer ${escapeHtml(m.name)}">×</button></div>`).join(''):'<div class="empty-selection">Choisissez une ou plusieurs machines dans le catalogue.</div>';
 }
 function adapt(service){
@@ -42,7 +42,8 @@ form.elements.start.addEventListener('change',()=>{form.elements.end.min=form.el
 form.addEventListener('submit',e=>{
  e.preventDefault();const d=Object.fromEntries(new FormData(form));const lines=['Bonjour,','',config[d.service][0],'',`Nom : ${d.name}`,`Société : ${d.company||'-'}`,`E-mail : ${d.email}`,`Téléphone : ${d.phone||'-'}`];
  if(d.service==='location'){
-  const items=machines.filter(m=>getSelection().has(m.id));
+  const selected=getSelection();
+  const items=machines.flatMap(m=>[...(selected.has(m.id)?[{name:m.name}]:[]),...(m.models||[]).flatMap((model,i)=>selected.has(`${m.id}-modele-${i}`)?[{name:`${m.name} — ${model.name}`}]:[])]);
   if(!items.length)return showToast('Sélectionnez au moins une machine dans le catalogue.');
   if(d.end<d.start)return showToast('La fin doit être postérieure ou égale au début.');
   lines.push(`Machines : ${items.map(m=>m.name).join(', ')}`,`Début : ${d.start}`,`Fin : ${d.end}`);
@@ -50,5 +51,5 @@ form.addEventListener('submit',e=>{
  if(d.equipment)lines.push(`Matériel : ${d.equipment}`);if(d.reference)lines.push(`Marque / référence : ${d.reference}`);
  lines.push('',d.message||'','', 'Cordialement');prepareEmail(`${config[d.service][0]} — Outilsud`,lines.join('\n'));
 });
-fetch('machines.json?v=43').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{machines=data;renderSelection();}).catch(()=>showToast('Impossible de charger les machines sélectionnées.'));
+fetch('machines.json?v=46').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{machines=data;renderSelection();}).catch(()=>showToast('Impossible de charger les machines sélectionnées.'));
 adapt('general');

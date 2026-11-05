@@ -1,5 +1,5 @@
 /** Location page: filtering, pagination and persistent quote selection. */
-import {$, escapeHtml, getSelection, saveSelection, showToast} from './common.js?v=44';
+import {$, escapeHtml, getSelection, saveSelection, showToast} from './common.js?v=34';
 const machineIcon = `<svg viewBox="0 0 160 120" aria-hidden="true"><g fill="none" stroke="#32317f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><rect x="25" y="70" width="100" height="24" rx="10" fill="#32317f"/><circle cx="47" cy="82" r="6" fill="#fff" stroke="#fff"/><circle cx="105" cy="82" r="6" fill="#fff" stroke="#fff"/><path d="M44 68V39h50l18 29z" fill="#d8edff"/><path d="M80 35l22-22 32 15 11 35" stroke="#48479a" stroke-width="10"/><path d="M144 62l-15 12 18 11" stroke="#48479a" stroke-width="8"/></g></svg>`;
 let machines = [];
 let page = 0;
@@ -22,7 +22,7 @@ function render() {
 }
 async function init() {
   try {
-    const response = await fetch('machines.json?v=44', {cache:'no-cache'});
+    const response = await fetch('machines.json', {cache:'no-cache'});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     if (!Array.isArray(data)) throw new Error('Format de catalogue invalide');
