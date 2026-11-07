@@ -9,17 +9,46 @@ function card(machine) {
   const selected = selection.has(machine.id);
   return `<article class="machine-card"><div class="machine-art">${machine.photo ? `<img src="${escapeHtml(machine.photo)}" alt="${escapeHtml(machine.name)}" loading="lazy">` : machineIcon}</div><div class="machine-content"><h2>${escapeHtml(machine.name)}</h2><p>${escapeHtml(machine.description)}</p><div class="machine-meta">◷ ${escapeHtml(machine.period || 'Sur demande')} · Prix sur demande</div>${machine.models?.length ? `<button class="machine-button" type="button" data-models="${escapeHtml(machine.id)}">Voir les ${machine.models.length} modèles</button>` : `<button class="machine-button ${selected ? 'active' : ''}" type="button" data-machine="${escapeHtml(machine.id)}" aria-pressed="${selected}">${selected ? '✓ Ajoutée au devis' : 'Demander un devis de location'}</button>`}</div></article>`;
 }
+const families = [
+ ['percage','Perçage & carottage','drill','adaptateur-de-couronne,carotteuse-a-beton,forets,foreuse-diamant-a-eau,perceuse-visseuse,perforateur,bati-de-forage-pied-de-carotteuse,foreuse-magnetique'],
+ ['demolition','Démolition','hammer','burineur,marteau-piqueur,dejointoyeur-pneumatique,goulotte-a-gravats'],
+ ['beton','Béton & maçonnerie','blocks','aiguille-vibrante,plaque-vibrante,rainureuse,polisseuse-a-beton'],
+ ['decoupe','Sciage & découpe','scissors','coupe-carrelage,multi-cutter,meuleuse,grignoteuse,scie-a-onglets-scie-a-table,scie-sabre,scie-sauteuse,tronconneuse-disqueuse,scie-circulaire,scie--matriaux'],
+ ['finition','Ponçage & finition','sparkles','ponceuse-a-parquet,ponceuse-excentrique-girafe-etc,sableuse'],
+ ['bois','Travail du bois','tree','mortaiseuse,raboteuse,defonceuse'],
+ ['fixation','Fixation & assemblage','wrench','agrafeuse,cloueur,cloueur-gaz,cloueur-pneumatique,cloueur-vertigel,boulonneuse,sertisseuse,poste-inverter'],
+ ['nettoyage','Nettoyage','droplet','shampouineuse,aspirateur,autolaveuse,nettoyeur-haute-pression'],
+ ['jardin','Jardin & espaces verts','leaf','debroussailleuse,motoculteur,taille-haie,tariere-thermique,tondeuse-autotractee,tronconneuse-a-bois,souffleur--feuilles'],
+ ['levage','Levage & manutention','package','leve-plaque-leve-panneau,transpalette,ventouse-de-levage-grabo'],
+ ['acces','Échafaudage & étançonnement','layers','echafaudage,etancons'],
+ ['energie','Électricité & air comprimé','zap','compresseur,groupe-electrogene'],
+ ['chauffage','Chauffage & séchage','sun','canon-a-chaleur,deshumidificateur'],
+ ['pompage','Pompage','waves','pompe-a-vide,pompe-submersible'],
+ ['mesure','Mesure & traçage','ruler','laserliner,lunettes-de-chantier']
+].map(([id,name,icon,ids])=>({id,name,icon,ids:ids.split(',')}));
+let activeFamily = null;
+let visibleCount = 20;
+const icons = {
+ drill:'M5 5l14 14M14 4l6 6M4 14l6 6',hammer:'M4 20l10-10m-5-5 5-5 10 10',blocks:'M3 5h18v14H3zM3 12h18M10 5v7m4 0v7',scissors:'M4 4l16 16M20 4L4 20',sparkles:'M12 2l2 7 7 3-7 2-2 7-2-7-7-2 7-3z',tree:'M12 3L4 15h16L12 3zM12 15v6',wrench:'M20 7a6 6 0 0 1-8 6l-7 7-3-3 7-7a6 6 0 0 1 6-8l-4 4 3 3z',droplet:'M12 2C8 8 5 11 5 15a7 7 0 0 0 14 0c0-4-3-7-7-13z',leaf:'M20 4C8 4 4 10 4 16a5 5 0 0 0 5 5c6 0 11-6 11-17zM5 20l12-12',package:'M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 5 9-5M12 12v9',layers:'M3 7l9-4 9 4-9 4zM3 12l9 4 9-4M3 17l9 4 9-4',zap:'M13 2L4 13h7l-1 9 10-12h-7z',sun:'M12 3v3m0 12v3M3 12h3m12 0h3M5 5l2 2m10 10 2 2M19 5l-2 2M7 17l-2 2M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8',waves:'M2 8q5-4 10 0t10 0M2 14q5-4 10 0t10 0M2 20q5-4 10 0t10 0',ruler:'M4 4h16v16H4zM8 4v5m4-5v3m4-3v5M4 12h5m-5 4h3'};
+function familyIcon(key){return `<svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${icons[key]}"></path></svg>`;}
 function render() {
-  const query = $('search').value.trim().toLocaleLowerCase('fr');
-  const filtered = machines.filter((m) => `${m.name} ${m.description}`.toLocaleLowerCase('fr').includes(query));
-  const pageSize = matchMedia('(max-width:760px)').matches ? 1 : 3;
-  const pages = Math.ceil(filtered.length / pageSize);
-  page = Math.max(0, Math.min(page, Math.max(0, pages - 1)));
-  $('catalog').innerHTML = filtered.slice(page * pageSize, (page + 1) * pageSize).map(card).join('') || '<p>Aucune machine trouvée.</p>';
-  $('catalogPrev').disabled = page === 0;
-  $('catalogNext').disabled = page >= pages - 1;
-  $('catalogPagination').textContent = pages ? `Page ${page + 1} sur ${pages} · ${filtered.length} machine(s)` : 'Aucun résultat';
-  $('resultCount').textContent = `${filtered.length} machine(s)`;
+ const query = $('search').value.trim().toLocaleLowerCase('fr');
+ const overview = !activeFamily && !query;
+ $('locationFamilies').hidden = !overview;
+ $('locationCatalogHeader').hidden = overview;
+ if (overview) {
+   $('locationFamilies').innerHTML = families.map(f=>`<button class="location-family" type="button" data-family="${f.id}">${familyIcon(f.icon)}<span>${escapeHtml(f.name)}</span><small>${f.ids.filter(id=>machines.some(m=>m.id===id)).length} machine(s)</small></button>`).join('');
+   $('catalog').innerHTML=''; $('catalogPagination').textContent=''; $('locationMore').hidden=true;
+   $('resultCount').textContent=`${machines.length} machines · 15 familles`;
+   return;
+ }
+ const family = families.find(f=>f.id===activeFamily);
+ const filtered = machines.filter(m=>(!family || family.ids.includes(m.id)) && `${m.name} ${m.description} ${(m.models||[]).map(x=>x.name).join(' ')}`.toLocaleLowerCase('fr').includes(query));
+ $('locationCatalogTitle').textContent=family ? family.name : 'Résultats de recherche';
+ $('catalog').innerHTML=filtered.slice(0,visibleCount).map(card).join('') || '<p>Aucune machine trouvée.</p>';
+ $('catalogPagination').textContent=`${Math.min(filtered.length,visibleCount)} sur ${filtered.length} machine(s)`;
+ $('locationMore').hidden=filtered.length<=visibleCount;
+ $('resultCount').textContent=`${filtered.length} machine(s)`;
 }
 async function init() {
   try {
@@ -44,9 +73,10 @@ $('catalog').addEventListener('click', (event) => {
   saveSelection(selection); render();
   window.dispatchEvent(new CustomEvent("contact-service",{detail:"location"}));
 });
-$('search').addEventListener('input', () => { page = 0; render(); });
-$('catalogPrev').addEventListener('click', () => { page -= 1; render(); });
-$('catalogNext').addEventListener('click', () => { page += 1; render(); });
+$('search').addEventListener('input', () => { activeFamily=null; visibleCount=20; render(); });
+$('locationFamilies').addEventListener('click',event=>{const button=event.target.closest('[data-family]');if(!button)return;activeFamily=button.dataset.family;visibleCount=20;render();});
+$('locationBack').addEventListener('click',()=>{activeFamily=null;visibleCount=20;$('search').value='';render();});
+$('locationMore').addEventListener('click',()=>{visibleCount+=20;render();});
 window.addEventListener('resize', render);
 window.addEventListener('selection-change',()=>{selection.clear();getSelection().forEach(id=>selection.add(id));render();});
 init();

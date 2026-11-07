@@ -1,7 +1,9 @@
 <section class="section catalog-section"><div class="container">
 <div class="section-heading"><div><p class="eyebrow">NOTRE CATALOGUE</p><h1>Demandez votre devis de location</h1><p>Sélectionnez une ou plusieurs machines et demandez une offre. Disponibilité et tarifs à confirmer par notre équipe.</p></div><a class="text-link" href="#contact" data-contact-service="location">Voir ma sélection →</a></div>
 <div class="filters"><label class="search-wrap"><span class="sr-only">Rechercher une machine</span><input id="search" placeholder="⌕ Rechercher une machine…" type="search"/></label><span id="resultCount"></span></div>
-<div class="catalog-carousel"><button aria-label="Machines précédentes" class="carousel-arrow" id="catalogPrev" type="button">‹</button><div aria-live="polite" class="catalog-grid" id="catalog"></div><button aria-label="Machines suivantes" class="carousel-arrow" id="catalogNext" type="button">›</button></div><p class="catalog-pagination" id="catalogPagination"></p>
+<div id="locationFamilies" class="location-families" aria-label="Familles de machines"></div>
+<div id="locationCatalogHeader" class="location-catalog-header" hidden><button id="locationBack" class="location-back" type="button">← Toutes les catégories</button><h2 id="locationCatalogTitle"></h2></div>
+<div aria-live="polite" class="catalog-grid" id="catalog"></div><p class="catalog-pagination" id="catalogPagination"></p><button id="locationMore" class="location-more" type="button" hidden>Afficher plus de machines</button>
 </div></section>
 <dialog id="locationModelsDialog" class="location-model-dialog" aria-labelledby="locationModelsTitle"><div class="location-model-header"><div><p class="eyebrow">MODÈLES DISPONIBLES</p><h2 id="locationModelsTitle">Aspirateurs</h2></div><form method="dialog"><button type="submit" class="location-model-close" aria-label="Fermer">×</button></form></div><p>Choisissez le ou les modèles qui vous intéressent.</p><div id="locationModelsList" class="location-model-list"></div><p class="location-model-note">Chaque modèle sélectionné apparaîtra séparément dans votre demande de devis.</p></dialog>
 
