@@ -51,5 +51,5 @@ form.addEventListener('submit',e=>{
  if(d.equipment)lines.push(`Matériel : ${d.equipment}`);if(d.reference)lines.push(`Marque / référence : ${d.reference}`);
  lines.push('',d.message||'','', 'Cordialement');prepareEmail(`${config[d.service][0]} — Outilsud`,lines.join('\n'));
 });
-fetch('machines.json?v=49').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{machines=data;renderSelection();}).catch(()=>showToast('Impossible de charger les machines sélectionnées.'));
+fetch('machines.json?v=47').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{machines=data;renderSelection();}).catch(()=>showToast('Impossible de charger les machines sélectionnées.'));
 adapt('general');

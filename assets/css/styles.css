@@ -378,15 +378,3 @@ body .site-footer{display:block!important}
 .location-model-art img {display:block!important;position:static!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center center!important;padding:0!important;transform:none!important;}
 .location-model-body {flex:1;display:flex;flex-direction:column;position:relative;background:#fff;}
 .location-model-body .machine-button {margin-top:auto;}
-
-/* Catalogue de location : navigation par 15 familles */
-.location-families{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:20px 0 30px}
-.location-family{display:flex;min-width:0;min-height:135px;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px 8px;background:#fff;border:1px solid var(--line);border-radius:14px;color:var(--blue);cursor:pointer;text-align:center;transition:border-color .15s,box-shadow .15s}
-.location-family:hover,.location-family:focus-visible{border-color:var(--blue);box-shadow:0 5px 18px #32317f18}
-.location-family span{font-weight:750;font-size:.9rem;line-height:1.25;color:#1d2843}.location-family small{color:var(--muted);font-size:.74rem}
-.location-catalog-header{margin:16px 0 20px}.location-catalog-header h2{margin:10px 0 0}.location-back{border:0;background:transparent;color:var(--blue);font-weight:750;cursor:pointer;padding:6px 0}
-.catalog-section .catalog-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.catalog-section .machine-art{height:135px;background:#fff;padding:8px}.catalog-section .machine-content{padding:12px}.catalog-section .machine-content h2{font-size:1rem;margin-bottom:8px}.catalog-section .machine-content p{font-size:.79rem;line-height:1.4;margin-bottom:10px}.catalog-section .machine-meta{font-size:.72rem;margin-bottom:12px}.catalog-section .machine-button{font-size:.76rem;min-height:42px;padding:9px 5px}
-.location-more{display:block;margin:20px auto 0;padding:12px 25px;border:1px solid var(--blue);border-radius:8px;color:var(--blue);background:#fff;font-weight:750;cursor:pointer}
-.location-more[hidden],.location-families[hidden],.location-catalog-header[hidden]{display:none!important}
-@media(max-width:1100px){.location-families,.catalog-section .catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:650px){.location-families,.catalog-section .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.location-family{min-height:115px}.location-family span{font-size:.8rem}.catalog-section .machine-art{height:120px}.catalog-section .machine-content{padding:10px}}
