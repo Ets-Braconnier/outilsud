@@ -257,12 +257,12 @@
     "description": "Découvrez les aspirateurs disponibles à la location.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/aspirateurs/aspirateur-25l.avif",
     "available": true,
     "models": [
       {
         "name": "Festool CTL 26 E — 26 L",
-        "photo": "assets/images/photos-locations/aspirateurs/FESTOOL-CTL-26 EI.avif"
+        "photo": "assets/images/photos-locations/aspirateurs/FESTOOL-CTL-26-EI.avif"
       },
       {
         "name": "Hikoki RP250 YDM — 20 L",
@@ -274,7 +274,7 @@
       },
       {
         "name": "Metabo ASR 35 ACP — 35 L",
-        "photo": "assets/images/photos-locations/aspirateurs/Metabo-ASR 35-ACP.avif"
+        "photo": "assets/images/photos-locations/aspirateurs/Metabo-ASR-35-ACP.avif"
       },
       {
         "name": "DeWalt DCV584 — 7,5 L, sur batterie",
@@ -304,7 +304,7 @@
     "description": "Nettoyage mécanisé des sols.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/autolaveuse Nilfisk SC530.avif",
     "available": true
   },
   {
@@ -313,7 +313,7 @@
     "description": "Support de guidage pour les travaux de carottage.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/BATIS DE FORAGE.avif",
     "available": true
   },
   {
@@ -322,26 +322,46 @@
     "description": "Serrage et desserrage de boulons.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/boulonneuse.avif",
     "available": true
   },
   {
     "id": "compresseur",
     "name": "Compresseur",
-    "description": "Alimentation en air comprimé pour vos travaux.",
+    "description": "Choisissez le modèle adapté à vos travaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
+    "photo": "assets/images/photos-locations/compresseur.avif",
+    "available": true,
+    "models": [
+      {
+        "name": "Compresseur",
+        "photo": "assets/images/photos-locations/compresseur.avif"
+      },
+      {
+        "name": "Compresseur sur remorque",
+        "photo": "assets/images/photos-locations/compresseur-remorque.avif"
+      }
+    ]
   },
   {
     "id": "debroussailleuse",
     "name": "Débroussailleuse",
-    "description": "Entretien des herbes hautes et broussailles.",
+    "description": "Choisissez le modèle adapté à vos travaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
+    "photo": "assets/images/photos-locations/debrouissailleuse-thermique.avif",
+    "available": true,
+    "models": [
+      {
+        "name": "Débroussailleuse thermique",
+        "photo": "assets/images/photos-locations/debrouissailleuse-thermique.avif"
+      },
+      {
+        "name": "Débroussailleuse sur batterie",
+        "photo": "assets/images/photos-locations/debrouissailleuse-sur-accu.avif"
+      }
+    ]
   },
   {
     "id": "defonceuse",
@@ -349,7 +369,7 @@
     "description": "Usinage et fraisage du bois.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/defonceuse.avif",
     "available": true
   },
   {
@@ -358,7 +378,7 @@
     "description": "Retrait des joints de maçonnerie.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/dejointoyeurpneumatique.avif",
     "available": true
   },
   {
@@ -367,7 +387,7 @@
     "description": "Accès en hauteur pour vos travaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/echafaudage.avif",
     "available": true
   },
   {
@@ -376,7 +396,7 @@
     "description": "Soutien provisoire des éléments de construction.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/etancon.avif",
     "available": true
   },
   {
@@ -385,7 +405,7 @@
     "description": "Perçage magnétique de pièces métalliques.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/foreuse-magnetique.avif",
     "available": true
   },
   {
@@ -394,7 +414,7 @@
     "description": "Découpe de tôles et éléments métalliques.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/grignoteuse.avif",
     "available": true
   },
   {
@@ -403,7 +423,7 @@
     "description": "Alimentation électrique autonome sur chantier.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/groupe-electrogene.avif",
     "available": true
   },
   {
@@ -412,7 +432,7 @@
     "description": "Levage et mise en place de plaques et panneaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/leve-plaque.avif",
     "available": true
   },
   {
@@ -421,17 +441,27 @@
     "description": "Préparation et travail de la terre.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/motoculteur.avif",
     "available": true
   },
   {
     "id": "nettoyeur-haute-pression",
     "name": "Nettoyeur haute pression",
-    "description": "Nettoyage à l’eau sous haute pression.",
+    "description": "Choisissez le modèle adapté à vos travaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
+    "photo": "assets/images/photos-locations/nettoreur-haute-pression-electrique.avif",
+    "available": true,
+    "models": [
+      {
+        "name": "Nettoyeur haute pression électrique",
+        "photo": "assets/images/photos-locations/nettoreur-haute-pression-electrique.avif"
+      },
+      {
+        "name": "Nettoyeur haute pression thermique",
+        "photo": "assets/images/photos-locations/nettoreur-haute-pression-thermique.avif"
+      }
+    ]
   },
   {
     "id": "plaque-vibrante",
@@ -439,7 +469,7 @@
     "description": "Compactage des sols et matériaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/plaque-vibrante.avif",
     "available": true
   },
   {
@@ -448,7 +478,7 @@
     "description": "Mise sous vide pour les travaux adaptés.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/pompe-a-vide.avif",
     "available": true
   },
   {
@@ -457,26 +487,31 @@
     "description": "Pompage et évacuation d’eau.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/pompe-submersible.avif",
     "available": true
   },
   {
     "id": "ponceuse-excentrique-girafe-etc",
     "name": "Ponceuse (excentrique, girafe, etc.)",
-    "description": "Ponçage des surfaces avec l’outil adapté.",
+    "description": "Choisissez le modèle adapté à vos travaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "pulverisateur",
-    "name": "Pulvérisateur",
-    "description": "Pulvérisation de produits adaptés.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
-    "available": true
+    "photo": "assets/images/photos-locations/ponceuse.avif",
+    "available": true,
+    "models": [
+      {
+        "name": "Ponceuse",
+        "photo": "assets/images/photos-locations/ponceuse.avif"
+      },
+      {
+        "name": "Ponceuse girafe",
+        "photo": "assets/images/photos-locations/ponceuse-girafe.avif"
+      },
+      {
+        "name": "Ponceuse à béton",
+        "photo": "assets/images/photos-locations/ponceuse-a-betob.avif"
+      }
+    ]
   },
   {
     "id": "sableuse",
@@ -484,7 +519,7 @@
     "description": "Décapage de surfaces par projection abrasive.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/sableuse.avif",
     "available": true
   },
   {
@@ -493,7 +528,7 @@
     "description": "Réalisation de rainures dans les matériaux.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/rainureuse.avif",
     "available": true
   },
   {
@@ -502,25 +537,7 @@
     "description": "Découpe de précision et coupes d’angle.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "scie-a-sol",
-    "name": "Scie à sol",
-    "description": "Découpe de sols et revêtements.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
-    "available": true
-  },
-  {
-    "id": "scie-plongeante",
-    "name": "Scie plongeante",
-    "description": "Découpe guidée de panneaux et matériaux.",
-    "period": "Sur demande",
-    "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/scie-a-onglet.avif",
     "available": true
   },
   {
@@ -529,7 +546,7 @@
     "description": "Découpe de matériaux avec une lame alternative.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/scie-sabre.avif",
     "available": true
   },
   {
@@ -538,7 +555,7 @@
     "description": "Découpes droites et courbes.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/scie-sauteuse.avif",
     "available": true
   },
   {
@@ -547,7 +564,7 @@
     "description": "Sertissage de raccords adaptés.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/sertisseuse.avif",
     "available": true
   },
   {
@@ -556,7 +573,7 @@
     "description": "Taille et entretien des haies.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/taille-haie.avif",
     "available": true
   },
   {
@@ -565,7 +582,7 @@
     "description": "Forage de trous dans la terre.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/tarière-thermique.avif",
     "available": true
   },
   {
@@ -574,7 +591,7 @@
     "description": "Tonte et entretien des pelouses.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/tondeuse.avif",
     "available": true
   },
   {
@@ -583,7 +600,7 @@
     "description": "Déplacement de charges sur palettes.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/transpalette.avif",
     "available": true
   },
   {
@@ -592,7 +609,7 @@
     "description": "Coupe et débit de bois.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/tronconneuse.avif",
     "available": true
   },
   {
@@ -601,7 +618,7 @@
     "description": "Découpe de matériaux avec disque adapté.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/tronconneuse-disqueuse.avif",
     "available": true
   },
   {
@@ -610,7 +627,34 @@
     "description": "Levage et manutention par ventouse.",
     "period": "Sur demande",
     "price": null,
-    "photo": null,
+    "photo": "assets/images/photos-locations/ventouse.avif",
+    "available": true
+  },
+  {
+    "id": "scie-circulaire",
+    "name": "Scie circulaire",
+    "description": "Découpe du bois et de panneaux.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": "assets/images/photos-locations/scie-circulaire.avif",
+    "available": true
+  },
+  {
+    "id": "scie--matriaux",
+    "name": "Scie à matériaux",
+    "description": "Découpe de matériaux de construction.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": "assets/images/photos-locations/scie-a-matérieux.avif",
+    "available": true
+  },
+  {
+    "id": "souffleur--feuilles",
+    "name": "Souffleur à feuilles",
+    "description": "Soufflage et ramassage des feuilles.",
+    "period": "Sur demande",
+    "price": null,
+    "photo": "assets/images/photos-locations/soufleur-a-feuille.avif",
     "available": true
   }
 ]
